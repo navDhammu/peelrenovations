@@ -1,0 +1,46 @@
+@use 'base';
+
+footer{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: base.$col-footer;
+    color:white;
+    font-size: 16px;
+    line-height: 1.5rem;
+    img{
+        width: 10rem;
+    }
+}
+
+.call{
+
+    &__number:link{
+        color:white;
+    }
+}
+
+.follow{
+    
+    ion-icon{
+        font-size: 1.5rem;
+    }
+    margin: 2rem 0;
+}
+
+#footer-links{
+    display:flex;
+    flex-direction: column;
+    align-items: center;
+    line-height: 2rem;
+}
+.footer-link{
+    text-transform: uppercase;
+    text-decoration: none;
+    color: white;
+}
+
+#copyright{
+    text-transform: capitalize;
+    margin-top: 2rem;
+}

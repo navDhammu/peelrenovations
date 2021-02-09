@@ -1,0 +1,31 @@
+@use 'base';
+
+#photo-gallery{
+    color:white;
+    margin: 1rem 1rem 3rem 1rem;
+    background-image: url('/images/portfolio_image_1.jpg');
+    background-position: center;
+    background-size: cover;
+    height: 15rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border: 2px solid base.$col-footer;
+    // box-shadow: 0 0 4px black;
+
+    p{
+        font-size: 2rem;
+        text-transform: capitalize;
+        text-shadow: 0 0 4px black;
+    }
+
+    button{
+        background-color: base.$col-main;
+        border: none;
+        color:white;
+        padding: 0.5rem;
+        border-radius: 1rem;
+        text-transform: uppercase;
+    }
+}

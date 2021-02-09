@@ -1,0 +1,36 @@
+@use 'base';
+
+header{
+    position: fixed;
+    width: 100%;
+    padding: 0;
+    background-color: white;
+    color: base.$col-main;
+    z-index: 100;
+}
+
+.header-top{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    &__logo{
+        width: 10rem;
+    }
+    &__icon{
+        font-size: 2.5rem;
+        margin-right: 1rem;
+    }
+}
+
+.header-bottom{
+    background-color: base.$col-main;
+    color:white;
+    text-align: center;
+    text-transform: capitalize;
+    padding:0.3rem 0;
+}
+
+
+
+
