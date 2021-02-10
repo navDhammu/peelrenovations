@@ -12,15 +12,27 @@ header {
   position: fixed;
   width: 100%;
   padding: 0;
-  background-color: white;
-  color: #a31e36;
   z-index: 100;
+}
+
+.header-bottom {
+  display: flex;
+  background-color: #a31e36;
+  color: white;
+  text-transform: capitalize;
+  padding: 3px;
+  justify-content: center;
+}
+.header-bottom p {
+  margin: 0 0 0 0.5rem;
 }
 
 .header-top {
   display: flex;
   justify-content: space-between;
   align-items: center;
+  background-color: white;
+  color: #a31e36;
 }
 .header-top__logo {
   width: 10rem;
@@ -30,12 +42,12 @@ header {
   margin-right: 1rem;
 }
 
-.header-bottom {
-  background-color: #a31e36;
+.header-phone {
+  background-color: #34404d;
   color: white;
   text-align: center;
-  text-transform: capitalize;
-  padding: 0.3rem 0;
+  text-transform: uppercase;
+  padding: 0.5rem;
 }
 
 .front-banner__img {
@@ -60,9 +72,10 @@ header {
   margin: 0 2rem;
   padding: 1rem;
   text-align: center;
-  transform: translateY(-50%);
+  transform: translateY(-30%);
   background-color: white;
   box-shadow: 0 0 5px #5f5d5d;
+  border-radius: 1rem;
 }
 .services__heading {
   display: flex;
@@ -73,9 +86,9 @@ header {
 }
 .services button {
   width: max-content;
-  font-size: 1rem;
+  font-size: 0.8rem;
   padding: 0.5rem 1rem;
-  text-transform: capitalize;
+  text-transform: uppercase;
   background-color: #a31e36;
   border: none;
   border-radius: 1rem;
@@ -117,12 +130,18 @@ header {
   text-shadow: 0 0 4px black;
 }
 #photo-gallery button {
+  display: flex;
+  align-items: center;
   background-color: #a31e36;
   border: none;
   color: white;
   padding: 0.5rem;
   border-radius: 1rem;
   text-transform: uppercase;
+}
+#photo-gallery button ion-icon {
+  font-size: 1.5rem;
+  margin-right: 0.5rem;
 }
 
 footer {

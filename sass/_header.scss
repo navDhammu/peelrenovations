@@ -4,15 +4,27 @@ header{
     position: fixed;
     width: 100%;
     padding: 0;
-    background-color: white;
-    color: base.$col-main;
     z-index: 100;
 }
 
+.header-bottom{
+    display: flex;
+    background-color: base.$col-main;
+    color:white;
+    text-transform: capitalize;
+    padding: 3px;
+    justify-content: center;
+
+    p{
+        margin: 0 0 0 0.5rem;
+    }
+}
 .header-top{
     display: flex;
     justify-content: space-between;
     align-items: center;
+    background-color: white;
+    color: base.$col-main;
 
     &__logo{
         width: 10rem;
@@ -23,12 +35,12 @@ header{
     }
 }
 
-.header-bottom{
-    background-color: base.$col-main;
-    color:white;
+.header-phone{
+    background-color: base.$col-footer;
+    color: white;
     text-align: center;
-    text-transform: capitalize;
-    padding:0.3rem 0;
+    text-transform: uppercase;
+    padding: 0.5rem;
 }
 
 
