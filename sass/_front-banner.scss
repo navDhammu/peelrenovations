@@ -1,14 +1,14 @@
 .front-banner{
     &__img{
-        height: 80vh;
         width:100%;
+       
     }
 
     &__writing{
         position:absolute;
         top:50%;
         left:50%;
-        transform: translate(-50%,-80%);
+        transform: translate(-50%,-60%);
         text-transform: capitalize;
         color: white;
         text-align: center;

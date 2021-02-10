@@ -19,7 +19,13 @@
         </div>
     </header>
     <section class='front-banner'>
-        <img class='front-banner__img'src="/images/bathroom-1.jpg" alt="">
+        <img srcset='/images/front-img-ipad.jpg 1100w, /images/front-img-mobile.jpg 500w'
+            sizes="(max-width: 600px) 500px, 1100px"
+            class='front-banner__img'>
+
+            <!-- <img src="/images/front-img-mobile.jpg"
+                 class='front-banner__img'> -->
+
         <div class='front-banner__writing'>
             <p>transform your bathroom</p>
         </div>
