@@ -5,14 +5,16 @@ header{
     width: 100%;
     padding: 0;
     z-index: 100;
+    box-shadow: 0 3px 3px gray;
+
 }
 
 .header-bottom{
     display: flex;
-    background-color: base.$col-main;
-    color:white;
+    background-color: lighten(base.$col-main, 70%);
+    color:black;
     text-transform: capitalize;
-    padding: 3px;
+    padding: 0.3rem;
     justify-content: center;
 
     p{
@@ -24,7 +26,6 @@ header{
     justify-content: space-between;
     align-items: center;
     background-color: white;
-    color: base.$col-main;
 
     &__logo{
         width: 10rem;
@@ -36,7 +37,7 @@ header{
 }
 
 .header-phone{
-    background-color: base.$col-footer;
+    background-color: base.$col-main;
     color: white;
     text-align: center;
     text-transform: uppercase;
