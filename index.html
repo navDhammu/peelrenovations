@@ -11,25 +11,16 @@
     <header>
         <div class='header-bottom'>
             <ion-icon name="call-sharp"></ion-icon>
-            <p>call us today 647-648-1847</p>
+            <p>Bhupinder 647-648-1847</p>
         </div>
         <div class='header-top'>
-            <img class='header-top__logo' src="/images/logo.svg" >
+            <img class='header-top__logo' src="/images/logo.png" >
             <ion-icon class='header-top__icon' name="menu-sharp"></ion-icon>    
         </div>
     </header>
+
     <section class='front-banner'>
-
-        <!-- <img srcset='/images/banner-1000.jpg 1000w, 
-                    /images/banner-1500.jpg 1500w, 
-                    /images/banner-2000.jpg 2000w,
-                    /images/banner-2500.jpg 2500w'
-         -->
-
-            <!-- <img src="/images/front-img-mobile.jpg"
-                 class='front-banner__img'> -->
-
-        <div class='front-banner__writing'>
+       <div class='front-banner__writing'>
             <p>transform your bathroom</p>
         </div>
     </section>
@@ -38,10 +29,18 @@
         <div class="services">
             <h3 class='services__heading'>Our Services</h3>
             <p class='services__paragraph'>
-                We specialize in complete bathroom renovation from demolition to finish. Serving Brampton, Mississauga, Woodbridge, Vaughan, and milton.
+                We specialize in complete bathroom renovation from demolition to finish. 
+                <br><br>
+                Now serving Brampton, Mississauga, Woodbridge, Vaughan, and milton.
             </p>
             <button>get a free estimate</button>
         </div>
+    </section>
+
+    <section id='photo-gallery'>
+        <ion-icon name="images-outline"></ion-icon>
+        <p class='heading'>Recent Projects</p>
+        <button id='btn-gallery'>view gallery</button>
     </section>
 
     <section class='icon-services'>
@@ -62,16 +61,10 @@
         </div>
     </section>
    
-    <section id='photo-gallery'>
-        <p class='heading'>recent projects</p>
-        <button>
-            <ion-icon name="images-outline"></ion-icon>
-            view gallery
-        </button>
-    </section>
+   
 
     <footer>
-        <img class='logo'src="/images/logo-footer.svg">
+        <img class='logo'src="/images/logo-dark.jpg">
         <div class="call">
             <ion-icon class='call__icon'name="call-outline"></ion-icon>
             <a class='call__number' href="callto:6475040015">647-648-1847</a>    
@@ -87,7 +80,28 @@
         <p id='copyright'>&copy; peel renovations inc. all right reserved 2021.</p>
     </footer>
 
+    <div class="gallery-modal">
+        <ion-icon class='gallery-modal__close-icon' name="close-outline"></ion-icon>
+        <div id="gallery">
+            <img class='img-1 gallery-img' src="/images/masterbath_highend-1.jpg">
+            <img class='img-3 gallery-img' src="/images/masterbath_highend-3.jpeg">    
+            <img class='img-4 gallery-img' src="/images/masterbath_highend-4.jpeg">   
+            <img class='img-5 gallery-img' src="/images/masterbath_woodbridge-2.jpeg">   
+            <img class='img-6 gallery-img' src="/images/masterbath_woodbridge-3.jpeg">     
+            <img class='img-7 gallery-img' src="/images/masterbath-vanity.jpeg">   
+            <img class='img-8 gallery-img' src="/images/basement-1.jpeg">   
+            <img class='img-9 gallery-img' src="/images/basement-2.jpeg">   
+            <img class='img-10 gallery-img' src="/images/basement-3.jpeg">   
+            <img class='img-11 gallery-img' src="/images/masterbath_1.jpeg">     
+            <img class='img-12 gallery-img' src="/images/masterbath_2.jpeg">     
+        </div>
+        <div class="gallery-modal__nextprev-icons">
+            <ion-icon class='gallery-modal__back-icon' name="chevron-back-sharp"></ion-icon>    
+            <ion-icon class='gallery-modal__next-icon' name="chevron-forward-outline"></ion-icon>
+        </div>
+    </div>
 <script src="https://unpkg.com/ionicons@5.4.0/dist/ionicons.js"></script>
+<script src='/app.js'></script>
 
 </body>
 </html>

@@ -4,12 +4,14 @@ footer{
     display: flex;
     flex-direction: column;
     align-items: center;
-    background-color: base.$col-footer;
+    background-color: base.$col-main;
     color:white;
     font-size: 16px;
     line-height: 1.5rem;
+
     img{
         width: 10rem;
+        padding: 1rem;
     }
 }
 
