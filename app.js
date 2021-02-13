@@ -5,12 +5,44 @@ const arrImages = document.querySelectorAll('.gallery-img');
 const firstInitial = gallery.firstElementChild;
 const lastInital = gallery.lastElementChild;
 
+const timeout = function (){
+    setTimeout(()=>{
+        const checkboxes = Array.from(document.querySelectorAll('.check-box'));
+        const hiddenCheckboxes = checkboxes.map(label=> label.parentElement.querySelector('input'));
+    
+        const notChecked = hiddenCheckboxes.filter((box) => !box.checked);
+        if (notChecked.length > 0){
+            notChecked[0].click();
+            console.log('clicked a checkbox')
+            timeout();
+        } 
+    }, 700);
+}
+
+window.addEventListener('load', (event) => {
+    document.querySelector('.container').classList.add('transition');
+    document.querySelector('.container').addEventListener('transitionend', ()=>{
+        timeout();
+      });
+});
 
 
-document.querySelector('#btn-gallery')
-        .addEventListener('click', ()=>{
-            galleryModal.style.display='block';
-        })
+  
+
+// document.addEventListener('DOMContentLoaded', (event) => {
+//     log.textContent = log.textContent + `DOMContentLoaded\n`;
+// });
+
+
+
+document.addEventListener('click', (e)=>{
+    if(e.target.className === 'btn-gallery'){
+        console.log('click')
+        galleryModal.style.display='block';
+    }
+});
+        
+        
 
 document.querySelector('.gallery-modal__close-icon')
         .addEventListener('click', ()=>{
