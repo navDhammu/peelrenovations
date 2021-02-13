@@ -3,28 +3,42 @@
     display:flex;
     justify-content: center;
 }
-.services{
-    padding: 1rem;
+.service{
+    padding: 0 1rem 1rem 1rem;
     text-align: center;
+    margin: 4rem 1rem 1rem 1rem;
+    border: 2px solid black;
+    border-radius: 1rem;
+
 
     &__heading{
-        display: flex;
-        justify-content: center;
-        align-items: center;
         margin:0;
-        text-transform: uppercase;
+        text-transform: capitalize;
     }
 
+    ion-icon{
+        background-color: white;
     
+        font-size: 4rem;
+        transform: translateY(-50%);
+        margin-bottom: -3rem;
+        border-radius:50%;
+        padding: 1rem;
+    }
+    p{
+        margin: 0.5rem 0;
+
+    }
     button{
-        width: max-content;
+        width: 100%;
         font-size: 0.8rem;
         padding: 0.5rem 1rem;
         text-transform: uppercase;
         background-color: base.$col-cta;
         border: none;
-        border-radius: 1rem;
+        border-radius: inherit;
         color: white;
+
     }
 
     
