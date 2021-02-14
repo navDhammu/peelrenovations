@@ -22,12 +22,12 @@ $duration: .4s;
     // flex-direction: column;
     // justify-content: center;
     // align-items: center;
-    text-align: center;
-    left: 50%;
-    transform: translateX(-50%);
-    width: max-content;
     position: absolute;
-    top: -100%;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    width: max-content;
     box-sizing: border-box;
     padding:25px;
     color: white;
@@ -36,7 +36,8 @@ $duration: .4s;
     *{
         text-shadow: 0 0 10px black;
     }
-    h1{
+
+    &__heading{
         text-transform: uppercase;
     }
 
@@ -56,17 +57,21 @@ $duration: .4s;
         }
     }
     button{
+        width: 90%;
+        font-size: 1rem;
         text-transform: uppercase;
+        text-shadow: 0 0 3px black;
+        box-shadow: 0 0 5px black;
         color: white;
-        background-color: base.$col-cta;
-        border: none;
-        padding: 0.5rem 1rem;
+        background: none;
+        border: 3px double white;
+        padding: 1rem;
     }
 }
 
 .transition{
-    top: 20%;
-    transition-property: top;
+    visibility: 'visible';
+    transition-property: visibility;
     transition-duration: 2s;
 }
 

@@ -1,9 +1,42 @@
+
 const galleryModal = document.querySelector('.gallery-modal');
 const gallery = document.querySelector('#gallery');
 const arrImages = document.querySelectorAll('.gallery-img');
 // arrImages[0].style.zIndex = '1';
-const firstInitial = gallery.firstElementChild;
+const firstInitial = arrImages[0]
 const lastInital = gallery.lastElementChild;
+
+const backArrow = document.querySelector('.gallery-modal__back-icon');
+backArrow.style.visibility = 'hidden';
+const nextArrow = document.querySelector('.gallery-modal__next-icon');
+
+let imgCount = 1;
+
+
+setImgCount();
+
+function setImgCount(){
+    document.querySelector('.count').textContent = `${imgCount}/${arrImages.length}`;
+}
+
+function imgCountIncrease(){
+    if (imgCount < arrImages.length){
+        imgCount++;
+        setImgCount();
+    }
+}
+
+function imgCountDecrease(){
+    if (imgCount > 1){
+        imgCount--;
+        setImgCount();
+    }
+}
+
+function imgCounter(direction){
+    imgCount = direction === 'up' ? imgCount + 1 : imgCount - 1;
+    document.querySelector('.count').textContent = `${imgCount}/${arrImages.length}`;
+}
 
 const timeout = function (){
     setTimeout(()=>{
@@ -21,9 +54,9 @@ const timeout = function (){
 
 window.addEventListener('load', (event) => {
     document.querySelector('.container').classList.add('transition');
-    document.querySelector('.container').addEventListener('transitionend', ()=>{
+
         timeout();
-      });
+  
 });
 
 
@@ -51,13 +84,18 @@ document.querySelector('.gallery-modal__close-icon')
 
 
 document.querySelector('.gallery-modal__next-icon')
-        .addEventListener('click', () => moveGallery('next'));
+        .addEventListener('click', () => {
+            moveGallery('next');
+        });
+           
 
 document.querySelector('.gallery-modal__back-icon')
         .addEventListener('click', () => moveGallery('prev'));
 
 
-                    
+
+
+
 
 function moveGallery(direction){
     const last = gallery.lastElementChild;
@@ -65,11 +103,12 @@ function moveGallery(direction){
     let condition, position, ele;
 
     if (direction === 'next') {
+        imgCountIncrease();
         condition = firstInitial !== last;
         position = 'afterbegin';
         ele = last;
     } else if (direction === 'prev') {
-        console.log('left')
+        imgCountDecrease();
         condition = lastInital !== last;
         position = 'beforeend';
         ele = first;
@@ -77,10 +116,18 @@ function moveGallery(direction){
 
     if (condition){
         gallery.insertAdjacentElement(position, ele);
-    }
+    } 
+    if (imgCount === arrImages.length) {
+        nextArrow.style.visibility = 'hidden';
+    } else if (imgCount === 1) {
+        backArrow.style.visibility = 'hidden';
+    } else if (nextArrow.style.visibility === 'hidden'){
+            nextArrow.style.visibility = 'visible';
+    } else if (backArrow.style.visibility === 'hidden'){
+            backArrow.style.visibility = 'visible';
+        }
+    
 }
-
-
 
 
 
