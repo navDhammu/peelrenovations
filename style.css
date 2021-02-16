@@ -308,33 +308,6 @@ input[type=checkbox]:checked + .check-box::before,
   text-transform: capitalize;
 }
 
-#photo-gallery {
-  background-color: #262262;
-  color: white;
-  margin: 1rem 0;
-  height: 15rem;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-evenly;
-  align-items: center;
-}
-#photo-gallery .heading {
-  font-size: 2rem;
-  margin: 0;
-}
-#photo-gallery ion-icon {
-  font-size: 7rem;
-  margin-right: 0.5rem;
-}
-#photo-gallery button {
-  background-color: #a31e36;
-  border: none;
-  color: white;
-  padding: 0.5rem;
-  text-transform: uppercase;
-  width: 50%;
-}
-
 .gallery-modal {
   display: none;
   position: fixed;
@@ -354,6 +327,7 @@ input[type=checkbox]:checked + .check-box::before,
   padding: 0.5rem;
 }
 .gallery-modal__nextprev-icons {
+  visibility: hidden;
   position: absolute;
   width: 100%;
   top: 50%;
@@ -363,15 +337,8 @@ input[type=checkbox]:checked + .check-box::before,
   z-index: 100;
   text-shadow: 0 0 5px black;
 }
-
-#gallery {
-  position: absolute;
-  top: 50%;
-  width: 100%;
-  height: 70%;
-  transform: translateY(-50%);
-}
-#gallery .count {
+.gallery-modal .count {
+  visibility: hidden;
   position: absolute;
   top: -10%;
   left: 50%;
@@ -379,11 +346,23 @@ input[type=checkbox]:checked + .check-box::before,
   color: white;
   font-size: 1.2rem;
 }
-#gallery .gallery-img {
+
+.left {
+  transition: left 0.5s;
+}
+
+#gallery {
+  display: flex;
   position: absolute;
+  top: 50%;
   width: 100%;
-  top: 0;
-  left: 0;
+  height: 70%;
+  transform: translateY(-50%);
+}
+#gallery img {
+  width: 100%;
+  box-sizing: border-box;
+  padding: 0 0.5rem;
 }
 
 footer {
