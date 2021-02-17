@@ -1,17 +1,27 @@
-$checked-color: #34b93d;
+$checked-color: #ffffff;
 $unchecked-color: white;
-$checkbox-height: 2rem;
+$checkbox-height: 1.5rem;
 $background-color:#667788;
 $font-color:#efefef;
 $duration: .4s;
 
 @use 'base';
 
+@keyframes random{
+    0% {opacity: 0;}
+    50% {}
+    100% {opacity: 1;}
+}
 .front-banner{
     height: 80vh;
-    background: url('/images/masterbath_highend-4.jpeg');
+    background: linear-gradient(
+        rgba(0, 0, 0, 0.1),
+        rgba(0, 0, 0, 0.1)
+      ), url('/images/masterbath_woodbridge-1.jpg');
     background-size: cover;
     background-position: center;
+    animation-name: random;
+    animation-duration: 3s;
 }
 
 //animation
@@ -50,6 +60,8 @@ $duration: .4s;
         align-items: center;
         margin-top: 1rem;
         text-transform: capitalize;
+        transform: scale(0);
+        transition: transform 3s;
 
         span{ 
             margin-left: 0.5rem;
@@ -60,19 +72,18 @@ $duration: .4s;
         width: 90%;
         font-size: 1rem;
         text-transform: uppercase;
-        text-shadow: 0 0 3px black;
-        box-shadow: 0 0 5px black;
         color: white;
-        background: none;
-        border: 3px double white;
-        padding: 1rem;
+        background: base.$col-cta;
+        border: none;
+        border-radius: 2rem;
+        padding: 0.7rem;
+        transform: scale(0);
+        transition: transform 3s;
     }
 }
 
-.transition{
-    visibility: 'visible';
-    transition-property: visibility;
-    transition-duration: 2s;
+.transition-grow{
+    transition: font-size 2s;
 }
 
 /* Checkmark style starts */

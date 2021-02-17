@@ -1,13 +1,14 @@
 @use 'base';
-#services{
+.services{
     display:flex;
     justify-content: center;
+    flex-wrap: wrap;
 }
 .service{
     padding: 0 1rem 1rem 1rem;
     text-align: center;
-    margin: 4rem 1rem 1rem 1rem;
-    border: 1px solid black;
+    margin: 2rem 1rem 1rem 1rem;
+    flex-basis: 300px;
     // border-radius: 1rem;
 
 
@@ -17,13 +18,9 @@
     }
 
     ion-icon{
-        background-color: white;
+        color: base.$col-icons;
+        font-size: 6rem;
     
-        font-size: 4rem;
-        transform: translateY(-50%);
-        margin-bottom: -3rem;
-        border-radius:50%;
-        padding: 1rem;
     }
     p{
         margin: 0.5rem 0;
@@ -36,7 +33,7 @@
         text-transform: uppercase;
         background-color: base.$col-cta;
         border: none;
-        border-radius: inherit;
+        border-radius: 1rem;
         color: white;
 
     }

@@ -9,10 +9,10 @@
 </head>
 <body>
     <header>
-        <div class='header-bottom'>
+        <!-- <div class='header-bottom'>
             <ion-icon name="call-sharp"></ion-icon>
             <p>Bhupinder 647-648-1847</p>
-        </div>
+        </div> -->
         <div class='header-top'>
             <img class='header-top__logo' src="/images/logo.png" >
             <ion-icon class='header-top__icon' name="menu-sharp"></ion-icon>    
@@ -28,18 +28,18 @@
                     <label for="a" class="check-box"></label> 
                     <span>powder rooms</span>
                 </li>
-                <li>
+                <li class='container__heading-checkbox'>
                     <input type="checkbox" id="b" />
                     <label for="b" class="check-box"></label>   
                     <span>master bathrooms</span>      
                 </li>
-                <li>
+                <li class='container__heading-checkbox'>
                     <input type="checkbox" id="c" />
                     <label for="c" class="check-box"></label>   
                     <span>high end bathrooms</span>      
                 </li>
             </ul>
-           <button class='btn-gallery'>see our work</button>
+           <button class='btn-gallery btn-front'>see our work</button>
         </div>
     </section>
 
@@ -52,27 +52,18 @@
                     We specialize in complete bathroom renovation from demolition to finish. 
                 </p>
             </div>
-            <div class='service'>
-                <ion-icon name="diamond-outline"></ion-icon>
-                <h2 class='service__heading'>quality materials</h2>
-                <p>We strive to use highest quality materials available for all projects.</p>    
-            </div>
+         
             <div class='service'>
                 <ion-icon name="construct-outline"></ion-icon>
                 <h2 class='service__heading'>Professional Installation</h2>
                 <p>With over 10 years of experience, we are experts in managing a bathroom renovation project, saving you time and unnecessary headaches.  </p>    
             </div>
-            <div class="service">
-                <ion-icon name="images-outline"></ion-icon>
-                <h2 class='service__heading'>portfolio</h2>
-                <p class='heading'>Click below to see our latest projects.</p>  
-                <button class='btn-gallery'>view gallery</button>
-            </div>
+           
             <div class='service'>
                 <ion-icon name="home-outline"></ion-icon>
                 <h2 class='service__heading'>FREE in home estimate</h2>
                 <p>Schedule an appointment at your home to discuss your project and get a free no obligation estimate. </p>    
-                <button>schedule your appointment</button>
+                <button>get in touch</button>
             </div>
             <div class='service'>
                 <ion-icon name="location-outline"></ion-icon>
@@ -83,9 +74,36 @@
             </div>
         </div>
     </section>
-   
+
+    <section class='front-gallery'>
+        <h3 class='front-gallery__heading'>Recent Projects</h3>
+        <img class='front-gallery__img' src="/images/masterbath_highend-1.jpg">
+        <img class='front-gallery__img' src="/images/masterbath_woodbridge-3.jpeg">    
+        <img class='front-gallery__img' src="/images/masterbath_1.jpeg">      
+        <button>view slideshow</button>
+    </section>
 
     <footer>
+            <div class="form">  
+        <form id="contact" method="post">
+          <h3>Get In Touch</h3>
+          <h4>Contact us for free consultation</h4>
+          <fieldset>
+            <input placeholder="Your name" type="text" tabindex="1" required autofocus>
+          </fieldset>
+          <fieldset>
+            <input placeholder="Your Phone Number" type="tel" tabindex="3" required>
+          </fieldset>
+          <fieldset>
+            <textarea placeholder="Tell us about your project...." tabindex="5" required></textarea>
+          </fieldset>
+          <fieldset>
+            <button name="submit" type="submit" id="contact-submit" data-submit="...Sending">Submit</button>
+          </fieldset>
+        </form>
+        
+      </div>
+
         <img class='logo'src="/images/logo-dark.jpg">
         <div class="footer-icons">
             <ion-icon name="person-sharp"></ion-icon>

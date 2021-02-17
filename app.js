@@ -44,17 +44,20 @@ const timeout = function (){
         const hiddenCheckboxes = checkboxes.map(label=> label.parentElement.querySelector('input'));
     
         const notChecked = hiddenCheckboxes.filter((box) => !box.checked);
+        console.log(notChecked)
         if (notChecked.length > 0){
+            document.querySelectorAll('.container__heading-checkbox')[0].style.transform = 'scale(1)';
             notChecked[0].click();
-            console.log('clicked a checkbox')
             timeout();
-        } 
-    }, 700);
+        } else {
+            document.querySelector('.btn-front').style.transform = 'scale(1)';
+         
+        }
+    });
 }
 
 window.addEventListener('load', (event) => {
     document.querySelector('.container').classList.add('transition');
-
         timeout();
   
 });

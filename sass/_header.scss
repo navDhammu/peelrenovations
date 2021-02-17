@@ -6,26 +6,26 @@ header{
     width: 100%;
     padding: 0;
     z-index: 1;
-    // box-shadow: 0 3px 3px gray;
+    box-shadow: 0 0 3px 3px rgb(207, 203, 203);
     color:white;
 }
 
-.header-bottom{
-    display: flex;
-    background-color: base.$col-main;
-    color: white;
-    text-transform: capitalize;
-    padding: 0.3rem;
-    justify-content: center;
-    font-size: 0.8rem;
+// .header-bottom{
+//     display: flex;
+//     background-color: base.$col-main;
+//     color: white;
+//     text-transform: capitalize;
+//     padding: 0.3rem;
+//     justify-content: center;
+//     font-size: 0.8rem;
 
-    ion-icon{
-        font-size: 1.2rem;
-    }
-    p{
-        margin: 0 0 0 0.5rem;
-    }
-}
+//     ion-icon{
+//         font-size: 1.2rem;
+//     }
+//     p{
+//         margin: 0 0 0 0.5rem;
+//     }
+// }
 .header-top{
     padding: 0.5rem 0;
     display: flex;

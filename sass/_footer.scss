@@ -1,7 +1,6 @@
 @use 'base';
 
 footer{
-    margin-top: 2rem;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -11,7 +10,7 @@ footer{
     line-height: 1.5rem;
 
     img{
-        width: 10rem;
+        width: 15rem;
         padding: 1rem;
     }
 }
@@ -59,6 +58,7 @@ footer{
 }
 #copyright{
     text-transform: capitalize;
+    text-align: center;
     color: gray;
     padding: 0.5rem;
 }

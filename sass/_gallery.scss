@@ -1,3 +1,37 @@
+@use 'base';
+.front-gallery{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    background-color: rgb(42, 47, 58);
+    padding: 2rem;
+
+    &__heading{
+        font-size: 2rem;
+        color: white;
+        font-weight: 100;
+    }
+
+    &__img{
+        width: 100%;
+        margin: 1rem 3rem;
+        border: 0.5rem solid rgb(248, 247, 247);
+        border-radius: 1rem;
+    }
+
+    button{
+        width: 100%;
+        font-size: 1rem;
+        text-transform: uppercase;
+        color: white;
+        background: base.$col-cta;
+        border: none;
+        border-radius: 2rem;
+        padding: 0.7rem;
+        margin-top: 2rem;
+    }
+}
+
 
 .gallery-modal{
     display: none;
