@@ -1,6 +1,8 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+    <script src="https://use.fontawesome.com/9aff792488.js"></script>
+
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
@@ -20,76 +22,111 @@
     </header>
 
     <section class='front-banner'>
-        <div class="container">
-            <h1 class='container__heading'>specializing in:</h1>
-            <ul>
-                <li class='container__heading-checkbox'>
-                    <input type="checkbox" id="a" />
-                    <label for="a" class="check-box"></label> 
-                    <span>powder rooms</span>
-                </li>
-                <li class='container__heading-checkbox'>
-                    <input type="checkbox" id="b" />
-                    <label for="b" class="check-box"></label>   
-                    <span>master bathrooms</span>      
-                </li>
-                <li class='container__heading-checkbox'>
-                    <input type="checkbox" id="c" />
-                    <label for="c" class="check-box"></label>   
-                    <span>high end bathrooms</span>      
-                </li>
-            </ul>
-           <button class='btn-gallery btn-front'>see our work</button>
+        <div class="front">
+            <div class="front__top">
+                <img src="/images/diamond.png" alt="">
+                <span class='front__heading'>transform your bathroom</span>
+            </div>
+            <hr class="front__hr">
+            <div class="front__bottom">
+                <img src="/images/home-value.png" alt="">
+                <span class='front__heading'>boost your home value</span>
+            </div>
         </div>
+        <button class='btn-gallery btn-front'>see our work</button>
     </section>
 
-    <section id='services'>
-        <div class="services">
-            <div class='service'>
-                <ion-icon name="settings-outline"></ion-icon>
-                <h2 class='service__heading'>our service</h2>
-                <p>
-                    We specialize in complete bathroom renovation from demolition to finish. 
-                </p>
-            </div>
-         
-            <div class='service'>
-                <ion-icon name="construct-outline"></ion-icon>
-                <h2 class='service__heading'>Professional Installation</h2>
-                <p>With over 10 years of experience, we are experts in managing a bathroom renovation project, saving you time and unnecessary headaches.  </p>    
-            </div>
-           
-            <div class='service'>
-                <ion-icon name="home-outline"></ion-icon>
-                <h2 class='service__heading'>FREE in home estimate</h2>
-                <p>Schedule an appointment at your home to discuss your project and get a free no obligation estimate. </p>    
-                <button>get in touch</button>
-            </div>
-            <div class='service'>
-                <ion-icon name="location-outline"></ion-icon>
-                <h2 class='service__heading'>locations</h2>
-                <p>
-                    Now serving Brampton, Mississauga, Woodbridge, Vaughan, and milton.
-                </p>
-            </div>
+    <section class="about">
+        <div class="heading">
+            <h2>About Peel Renovations</h2>
+            <hr>
         </div>
+        <p>We are a small renovations business location in Brampton, ON. 
+            Our expertise is in <strong>bathroom renovations</strong>.
+            We are experts in designing, planning, and performing all work related to bathrooms from demolition phase to end product.
+            Now serving Brampton, Mississauga, Vaughan and Woodbridge.
+        </p>
     </section>
+       
 
     <section class='front-gallery'>
-        <h3 class='front-gallery__heading'>Recent Projects</h3>
-        <img class='front-gallery__img' src="/images/masterbath_highend-1.jpg">
-        <img class='front-gallery__img' src="/images/masterbath_woodbridge-3.jpeg">    
-        <img class='front-gallery__img' src="/images/masterbath_1.jpeg">      
-        <button>view slideshow</button>
+        <div class='heading'>
+            <h2 class='heading__title'>Recent Projects</h2>
+            <hr>
+            
+        </div>
+        <div class='front-gallery__images'>
+            <div class='image-container'>
+                <div class='image-container__inner'>
+                    <img class='image-container__img' src="/images/masterbath_highend-1.jpg">
+                    <p>Highend master bathroom with free standing tub, standing shower, and large tiles with wall pattern</p>
+                </div>
+            </div>
+            <div class='image-container'>
+                <div class='image-container__inner'>
+                    <img class='image-container__img' src="/images/masterbath_woodbridge-3.jpeg">  
+                    <p>Spacious master bathroom with addition of standing shower and new tiles</p>
+                </div>
+            </div>  
+            <div class='image-container'>
+                <div class='image-container__inner'>
+                    <img class='image-container__img' src="/images/masterbath_1.jpeg">     
+                    <p>Addition of standing shower in master bathroom</p>
+                </div>
+            </div>
+            <div class='image-container'>
+                <div class='image-container__inner'>
+                    <img class='image-container__img' src="/images/basement-1.jpeg">
+                    <p>Simplistic standing shower.</p>
+                </div>
+            </div>
+        </div>
+        <div class="front-gallery__footer">
+            <div class='front-gallery__footer-see-more'>
+                <h2>See More</h2>
+                <ion-icon name="arrow-down-outline"></ion-icon>
+                <button>view gallery slideshow</button>    
+            </div>    
+        </div>
     </section>
+    <section id='services'>
+        <div class='heading'>
+            <h2 class='heading__title'>Why work with Peel Renovations?</h2>
+            <hr>
+        </div>
+        <div class="services">
+        <div class='service'>
+            <img src="/images/specialization.png" alt="">
+            <!-- <i class="fa fa-bath service__icon"></i>                 -->
+            <h2 class='service__heading'>Specialized service</h2>
+            <p>
+                We only take on bathroom work. This allows us to be highly focused and efficient on the job that matters most to you.
+            </p>
+        </div>
+     
+        <div class='service'>
+            <img src="/images/worksmanship.png" alt="">
+            <!-- <ion-icon name="construct-outline"></ion-icon> -->
+            <h2 class='service__heading'>Highly Experienced</h2>
+            <p>With over 11 years experience in home renovations, we have the skillset to take on any project big or small from start to completion.</p>    
+        </div>
+       
+        <div class='service'>
+            <img src="/images/design.png" alt="">
+            <!-- <ion-icon name="home-outline"></ion-icon> -->
+            <h2 class='service__heading'>Free Design Consulation</h2>
+            <p>We will work with you in carefully planning and creating the perfect bathroom in the available space and within your budget.</p>    
+        </div>
+    </div>
+</section>
 
     <footer>
-            <div class="form">  
+        <div class="form">  
         <form id="contact" method="post">
           <h3>Get In Touch</h3>
-          <h4>Contact us for free consultation</h4>
+          <h4>Contact us for a free quote and consultation</h4>
           <fieldset>
-            <input placeholder="Your name" type="text" tabindex="1" required autofocus>
+            <input placeholder="Your name" type="text" tabindex="1" required >
           </fieldset>
           <fieldset>
             <input placeholder="Your Phone Number" type="tel" tabindex="3" required>
@@ -118,7 +155,6 @@
             <span>Follow</span>
             <ion-icon name="logo-facebook"></ion-icon>
         </div>
-       
         <div id='copyright'>&copy; peel renovations inc. all right reserved 2021.</div>
     </footer>
 
@@ -147,6 +183,7 @@
 <script src='/hammer.js'></script>
 <script src="https://unpkg.com/ionicons@5.4.0/dist/ionicons.js"></script>
 <script src='/app.js'></script>
+
 
 </body>
 </html>

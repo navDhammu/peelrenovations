@@ -7,67 +7,70 @@ $duration: .4s;
 
 @use 'base';
 
-@keyframes random{
-    0% {opacity: 0;}
-    50% {}
-    100% {opacity: 1;}
+@keyframes animate{
+    0%{opacity: 0}
+    100%{opacity: 1}
 }
+
 .front-banner{
     height: 80vh;
     background: linear-gradient(
-        rgba(0, 0, 0, 0.1),
-        rgba(0, 0, 0, 0.1)
-      ), url('/images/masterbath_woodbridge-1.jpg');
+        rgba(0, 0, 0, 0),
+        rgba(0, 0, 0, 0)
+      ), url('/images/front-banner.jpg');
     background-size: cover;
     background-position: center;
-    animation-name: random;
+    animation-name: animate;
     animation-duration: 3s;
 }
 
 //animation
   
  
-.container{
-    // display: flex;
-    // flex-direction: column;
-    // justify-content: center;
-    // align-items: center;
+.front{
     position: absolute;
-    left: 50%;
-    top: 50%;
-    transform: translate(-50%, -50%);
-    text-align: center;
-    width: max-content;
+    width: 100%;
+    height: 80vh;   
     box-sizing: border-box;
-    padding:25px;
-    color: white;
-   
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
 
-    *{
-        text-shadow: 0 0 10px black;
+    &__hr{
+        border: 2px solid base.$col-main;
+        width: 30%;
+        margin: 1rem 0;
     }
 
     &__heading{
         text-transform: uppercase;
-    }
-
-    ul{
-        list-style-type: none;
-    }
-
-    li{
-        display: flex;
-        align-items: center;
+        font-size: 2rem;
+        font-weight: 800;
+        text-shadow: 0 0 4px black;
         margin-top: 1rem;
-        text-transform: capitalize;
-        transform: scale(0);
-        transition: transform 3s;
 
-        span{ 
-            margin-left: 0.5rem;
-            font-size: 1.3rem;
-        }
     }
+
+    &__top, &__bottom{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-evenly;
+        margin-top: 1rem;
+        color: white;
+
+        img{
+            width: 20%;
+        }
+
+      
+
+    }
+
+   
+    
     button{
         width: 90%;
         font-size: 1rem;
@@ -82,124 +85,16 @@ $duration: .4s;
     }
 }
 
-.transition-grow{
-    transition: font-size 2s;
-}
+@media (min-width: 1000px){
+    .front{
+        &__heading{
+            font-size: 2.5rem;
+            width: 100%;
+            margin-left: 2rem;
+        }
+        &__top, &__bottom{
+            flex-direction: row;
+        }
 
-/* Checkmark style starts */
-
-@-moz-keyframes dothabottomcheck{
-    0% { height: 0; }
-    100% { height: $checkbox-height/2; }
-}
-
-@-webkit-keyframes dothabottomcheck{
-    0% { height: 0; }
-    100% { height: $checkbox-height/2; }
-}
-
-@keyframes dothabottomcheck{
-    0% { height: 0; }
-    100% { height: $checkbox-height/2;  }
-}
-
-@keyframes dothatopcheck{
-    0% { height: 0; }
-    50% { height: 0; }
-    100% { height: $checkbox-height * 1.2; }
-}
-@-webkit-keyframes dothatopcheck{
-    0% { height: 0; }
-    50% { height: 0; }
-    100% { height: $checkbox-height * 1.2; }
-}
-@-moz-keyframes dothatopcheck{
-    0% { height: 0; }
-    50% { height: 0; }
-    100% { height: $checkbox-height * 1.2; }
-}
-
-input[type=checkbox]{
-    display:none;
-}
-
-.check-box {
-    height: $checkbox-height;
-    width: $checkbox-height;
-    background-color: transparent;
-    border: $checkbox-height * .1 solid $unchecked-color;
-    border-radius: 5px;
-    position: relative;
-    display: inline-block;
-    -moz-box-sizing: border-box;
-    -webkit-box-sizing: border-box;
-    box-sizing: border-box;
-    -moz-transition: border-color ease $duration/2;
-    -o-transition: border-color ease $duration/2;
-    -webkit-transition: border-color ease $duration/2;
-    transition: border-color ease $duration/2;
-    cursor:pointer;
-
-    &::before, &::after {
-        -moz-box-sizing: border-box;
-        -webkit-box-sizing: border-box;
-        box-sizing: border-box;
-        position: absolute;
-        height: 0;
-        width: $checkbox-height * .2;
-        background-color: $checked-color;
-        display: inline-block;
-        -moz-transform-origin: left top;
-        -ms-transform-origin: left top;
-        -o-transform-origin: left top;
-        -webkit-transform-origin: left top;
-        transform-origin: left top;
-        border-radius: 5px;
-        content: ' ';
-        -webkit-transition: opacity ease .5;
-        -moz-transition: opacity ease .5;
-        transition: opacity ease .5;
-    }
-
-    &::before {
-        top:$checkbox-height * .72;
-        left: $checkbox-height * .41;
-        box-shadow: 0 0 0 $checkbox-height * .05 $background-color;
-        -moz-transform: rotate(-135deg);
-        -ms-transform: rotate(-135deg);
-        -o-transform: rotate(-135deg);
-        -webkit-transform: rotate(-135deg);
-        transform: rotate(-135deg);
-    }
-
-    &::after {
-        top: $checkbox-height * .37;
-        left: $checkbox-height * .05;
-        -moz-transform: rotate(-45deg);
-        -ms-transform: rotate(-45deg);
-        -o-transform: rotate(-45deg);
-        -webkit-transform: rotate(-45deg);
-        transform: rotate(-45deg);
-    }
-}
-
-input[type=checkbox]:checked + .check-box,
-.check-box.checked{
-    border-color:$checked-color;
-    
-    &::after{
-        height: $checkbox-height * .5;
-        -moz-animation: dothabottomcheck $duration/2 ease 0s forwards;
-        -o-animation: dothabottomcheck $duration/2 ease 0s forwards;
-        -webkit-animation: dothabottomcheck $duration/2 ease 0s forwards;
-        animation: dothabottomcheck $duration/2 ease 0s forwards;
-    }
-     
-    &::before{
-        height: $checkbox-height * 1.2;
-        -moz-animation: dothatopcheck $duration ease 0s forwards;
-        -o-animation: dothatopcheck $duration ease 0s forwards;
-        -webkit-animation: dothatopcheck $duration ease 0s forwards;
-        animation: dothatopcheck $duration ease 0s forwards;
     }
 }

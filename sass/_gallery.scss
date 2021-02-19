@@ -1,34 +1,100 @@
 @use 'base';
+
+
 .front-gallery{
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    background-color: rgb(42, 47, 58);
-    padding: 2rem;
+    background-color: lighten(base.$col-main, 60%);
 
     &__heading{
         font-size: 2rem;
-        color: white;
         font-weight: 100;
+        text-align: center;
+        padding: 2rem;
     }
 
-    &__img{
-        width: 100%;
-        margin: 1rem 3rem;
-        border: 0.5rem solid rgb(248, 247, 247);
-        border-radius: 1rem;
+    &__images{
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        color: black;
     }
+
+    &__footer{
+        &-quote, &-see-more{
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            padding: 1rem 0;
+    
+            >*{
+                margin-bottom: 1rem;
+            }
+        }
+    }
+   
 
     button{
-        width: 100%;
+        max-width: max-content;
         font-size: 1rem;
         text-transform: uppercase;
         color: white;
         background: base.$col-cta;
         border: none;
         border-radius: 2rem;
-        padding: 0.7rem;
-        margin-top: 2rem;
+        padding: 1rem 3rem;
+    }
+}
+
+
+.image-container{
+    width: 90%;
+    padding: 1rem;
+    text-align: center;
+    box-sizing: border-box;
+
+    &__inner{
+        padding:0.5rem;
+        background-color: lighten(base.$col-main, 70%);
+        border-radius: 1rem;
+        box-shadow: 0 0 5px base.$col-main;
+
+        p{
+            height: 3rem;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 2rem 0;
+        }
+    }
+
+    &__img{
+        width: 100%;
+        // // padding: 1rem;
+        // margin-bottom: 2rem;
+        // border: 3px solid rgb(206, 201, 201);
+        border-radius: 0.5rem;
+    }
+    
+}
+
+@media (min-width: 600px){
+    .image-container{
+        width: 50%;
+    }
+    .front-gallery__images{
+        padding: 0 2rem;
+    }
+
+
+}
+
+@media (min-width: 1200px){
+    .image-container{
+        width: 25%;
+    }
+    .front-gallery__footer{
+        display: flex;
+        justify-content: space-evenly;
     }
 }
 

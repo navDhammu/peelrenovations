@@ -4,6 +4,25 @@
     justify-content: center;
     flex-wrap: wrap;
 }
+.heading{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 2rem 0;
+    text-transform: capitalize;
+
+    &__title{
+        text-align: center;
+    }
+
+    hr{
+        width: 4rem;
+        border: 2px solid base.$col-main;
+        margin-top:1rem;
+        color: base.$col-main;
+    }
+}
 .service{
     padding: 0 1rem 1rem 1rem;
     text-align: center;
@@ -17,6 +36,9 @@
         text-transform: capitalize;
     }
 
+    &__icon{
+        font-size: 3rem;
+    }
     ion-icon{
         color: base.$col-icons;
         font-size: 6rem;

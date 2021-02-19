@@ -56,11 +56,11 @@ const timeout = function (){
     });
 }
 
-window.addEventListener('load', (event) => {
-    document.querySelector('.container').classList.add('transition');
-        timeout();
+// window.addEventListener('load', (event) => {
+//     document.querySelector('.container').classList.add('transition');
+//         timeout();
   
-});
+// });
 
 
   

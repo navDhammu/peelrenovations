@@ -7,7 +7,7 @@ body {
   margin: 0;
   padding: 0;
   font-family: "Roboto", Helvetica, Arial, sans-serif;
-  background-color: #F9F9F9;
+  background-color: white;
   box-sizing: border-box;
 }
 
@@ -17,7 +17,6 @@ header {
   width: 100%;
   padding: 0;
   z-index: 1;
-  box-shadow: 0 0 3px 3px #cfcbcb;
   color: white;
 }
 
@@ -49,7 +48,7 @@ header {
   margin: 0;
 }
 
-@keyframes random {
+@keyframes animate {
   0% {
     opacity: 0;
   }
@@ -59,46 +58,48 @@ header {
 }
 .front-banner {
   height: 80vh;
-  background: linear-gradient(rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.1)), url("/images/masterbath_woodbridge-1.jpg");
+  background: linear-gradient(rgba(0, 0, 0, 0), rgba(0, 0, 0, 0)), url("/images/front-banner.jpg");
   background-size: cover;
   background-position: center;
-  animation-name: random;
+  animation-name: animate;
   animation-duration: 3s;
 }
 
-.container {
+.front {
   position: absolute;
-  left: 50%;
-  top: 50%;
-  transform: translate(-50%, -50%);
-  text-align: center;
-  width: max-content;
+  width: 100%;
+  height: 80vh;
   box-sizing: border-box;
-  padding: 25px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+.front__hr {
+  border: 2px solid #262262;
+  width: 30%;
+  margin: 1rem 0;
+}
+.front__heading {
+  text-transform: uppercase;
+  font-size: 2rem;
+  font-weight: 800;
+  text-shadow: 0 0 4px black;
+  margin-top: 1rem;
+}
+.front__top, .front__bottom {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-evenly;
+  margin-top: 1rem;
   color: white;
 }
-.container * {
-  text-shadow: 0 0 10px black;
+.front__top img, .front__bottom img {
+  width: 20%;
 }
-.container__heading {
-  text-transform: uppercase;
-}
-.container ul {
-  list-style-type: none;
-}
-.container li {
-  display: flex;
-  align-items: center;
-  margin-top: 1rem;
-  text-transform: capitalize;
-  transform: scale(0);
-  transition: transform 3s;
-}
-.container li span {
-  margin-left: 0.5rem;
-  font-size: 1.3rem;
-}
-.container button {
+.front button {
   width: 90%;
   font-size: 1rem;
   text-transform: uppercase;
@@ -111,154 +112,45 @@ header {
   transition: transform 3s;
 }
 
-.transition-grow {
-  transition: font-size 2s;
-}
-
-/* Checkmark style starts */
-@-moz-keyframes dothabottomcheck {
-  0% {
-    height: 0;
+@media (min-width: 1000px) {
+  .front__heading {
+    font-size: 2.5rem;
+    width: 100%;
+    margin-left: 2rem;
   }
-  100% {
-    height: 0.75rem;
+  .front__top, .front__bottom {
+    flex-direction: row;
   }
 }
-@-webkit-keyframes dothabottomcheck {
-  0% {
-    height: 0;
-  }
-  100% {
-    height: 0.75rem;
-  }
+.about {
+  padding: 0 0 2rem 0;
 }
-@keyframes dothabottomcheck {
-  0% {
-    height: 0;
-  }
-  100% {
-    height: 0.75rem;
-  }
-}
-@keyframes dothatopcheck {
-  0% {
-    height: 0;
-  }
-  50% {
-    height: 0;
-  }
-  100% {
-    height: 1.8rem;
-  }
-}
-@-webkit-keyframes dothatopcheck {
-  0% {
-    height: 0;
-  }
-  50% {
-    height: 0;
-  }
-  100% {
-    height: 1.8rem;
-  }
-}
-@-moz-keyframes dothatopcheck {
-  0% {
-    height: 0;
-  }
-  50% {
-    height: 0;
-  }
-  100% {
-    height: 1.8rem;
-  }
-}
-input[type=checkbox] {
-  display: none;
-}
-
-.check-box {
-  height: 1.5rem;
-  width: 1.5rem;
-  background-color: transparent;
-  border: 0.15rem solid white;
-  border-radius: 5px;
-  position: relative;
-  display: inline-block;
-  -moz-box-sizing: border-box;
-  -webkit-box-sizing: border-box;
-  box-sizing: border-box;
-  -moz-transition: border-color ease 0.2s;
-  -o-transition: border-color ease 0.2s;
-  -webkit-transition: border-color ease 0.2s;
-  transition: border-color ease 0.2s;
-  cursor: pointer;
-}
-.check-box::before, .check-box::after {
-  -moz-box-sizing: border-box;
-  -webkit-box-sizing: border-box;
-  box-sizing: border-box;
-  position: absolute;
-  height: 0;
-  width: 0.3rem;
-  background-color: #ffffff;
-  display: inline-block;
-  -moz-transform-origin: left top;
-  -ms-transform-origin: left top;
-  -o-transform-origin: left top;
-  -webkit-transform-origin: left top;
-  transform-origin: left top;
-  border-radius: 5px;
-  content: " ";
-  -webkit-transition: opacity ease 0.5;
-  -moz-transition: opacity ease 0.5;
-  transition: opacity ease 0.5;
-}
-.check-box::before {
-  top: 1.08rem;
-  left: 0.615rem;
-  box-shadow: 0 0 0 0.075rem #667788;
-  -moz-transform: rotate(-135deg);
-  -ms-transform: rotate(-135deg);
-  -o-transform: rotate(-135deg);
-  -webkit-transform: rotate(-135deg);
-  transform: rotate(-135deg);
-}
-.check-box::after {
-  top: 0.555rem;
-  left: 0.075rem;
-  -moz-transform: rotate(-45deg);
-  -ms-transform: rotate(-45deg);
-  -o-transform: rotate(-45deg);
-  -webkit-transform: rotate(-45deg);
-  transform: rotate(-45deg);
-}
-
-input[type=checkbox]:checked + .check-box,
-.check-box.checked {
-  border-color: #ffffff;
-}
-input[type=checkbox]:checked + .check-box::after,
-.check-box.checked::after {
-  height: 0.75rem;
-  -moz-animation: dothabottomcheck 0.2s ease 0s forwards;
-  -o-animation: dothabottomcheck 0.2s ease 0s forwards;
-  -webkit-animation: dothabottomcheck 0.2s ease 0s forwards;
-  animation: dothabottomcheck 0.2s ease 0s forwards;
-}
-input[type=checkbox]:checked + .check-box::before,
-.check-box.checked::before {
-  height: 1.8rem;
-  -moz-animation: dothatopcheck 0.4s ease 0s forwards;
-  -o-animation: dothatopcheck 0.4s ease 0s forwards;
-  -webkit-animation: dothatopcheck 0.4s ease 0s forwards;
-  animation: dothatopcheck 0.4s ease 0s forwards;
+.about p {
+  padding: 1rem;
 }
 
 .services {
   display: flex;
   justify-content: center;
   flex-wrap: wrap;
+}
+
+.heading {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 2rem 0;
+  text-transform: capitalize;
+}
+.heading__title {
+  text-align: center;
+}
+.heading hr {
+  width: 4rem;
+  border: 2px solid #262262;
+  margin-top: 1rem;
+  color: #262262;
 }
 
 .service {
@@ -270,6 +162,9 @@ input[type=checkbox]:checked + .check-box::before,
 .service__heading {
   margin: 0;
   text-transform: capitalize;
+}
+.service__icon {
+  font-size: 3rem;
 }
 .service ion-icon {
   color: #cccaec;
@@ -305,35 +200,84 @@ input[type=checkbox]:checked + .check-box::before,
 }
 
 .front-gallery {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  background-color: #2a2f3a;
-  padding: 2rem;
+  background-color: #cccaec;
 }
 .front-gallery__heading {
   font-size: 2rem;
-  color: white;
   font-weight: 100;
+  text-align: center;
+  padding: 2rem;
 }
-.front-gallery__img {
-  width: 100%;
-  margin: 1rem 3rem;
-  border: 0.5rem solid #f8f7f7;
-  border-radius: 1rem;
+.front-gallery__images {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  color: black;
+}
+.front-gallery__footer-quote, .front-gallery__footer-see-more {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 1rem 0;
+}
+.front-gallery__footer-quote > *, .front-gallery__footer-see-more > * {
+  margin-bottom: 1rem;
 }
 .front-gallery button {
-  width: 100%;
+  max-width: max-content;
   font-size: 1rem;
   text-transform: uppercase;
   color: white;
   background: #4CAF50;
   border: none;
   border-radius: 2rem;
-  padding: 0.7rem;
-  margin-top: 2rem;
+  padding: 1rem 3rem;
 }
 
+.image-container {
+  width: 90%;
+  padding: 1rem;
+  text-align: center;
+  box-sizing: border-box;
+}
+.image-container__inner {
+  padding: 0.5rem;
+  background-color: #f0effa;
+  border-radius: 1rem;
+  box-shadow: 0 0 5px #262262;
+}
+.image-container__inner p {
+  height: 3rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 2rem 0;
+}
+.image-container__img {
+  width: 100%;
+  border-radius: 0.5rem;
+}
+
+@media (min-width: 600px) {
+  .image-container {
+    width: 50%;
+  }
+
+  .front-gallery__images {
+    padding: 0 2rem;
+  }
+}
+@media (min-width: 1200px) {
+  .image-container {
+    width: 25%;
+  }
+
+  .front-gallery__footer {
+    display: flex;
+    justify-content: space-evenly;
+  }
+}
 .gallery-modal {
   display: none;
   position: fixed;
@@ -405,6 +349,7 @@ input[type=checkbox]:checked + .check-box::before,
   margin: 0 auto;
   position: relative;
   font-weight: 100;
+  font-size: 1rem;
   color: white;
   background: #262262;
 }
