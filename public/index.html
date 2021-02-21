@@ -11,25 +11,35 @@
 </head>
 <body>
     <header>
-        <!-- <div class='header-bottom'>
-            <ion-icon name="call-sharp"></ion-icon>
-            <p>Bhupinder 647-648-1847</p>
-        </div> -->
-        <div class='header-top'>
-            <img class='header-top__logo' src="/images/logo.png" >
-            <ion-icon class='header-top__icon' name="menu-sharp"></ion-icon>    
+        <div class='header'>
+            <a href="tel:6475040015">
+                <ion-icon class='header__icon-phone' name="call-sharp"></ion-icon>    
+            </a> 
+            <img class='header__logo' src='/images/icons/logo.png'>
+            <ion-icon class='header__icon-menu' name="menu-sharp"></ion-icon>    
+            <ul class='header__horizontal-menu'>
+                <li>
+                    home
+                </li>
+                <li>
+                    gallery
+                </li>
+                <li>
+                    contact
+                </li>
+            </ul>
         </div>
     </header>
 
     <section class='front-banner'>
         <div class="front">
             <div class="front__top">
-                <img src="/images/diamond.png" alt="">
+                <img src="/images/icons/diamond.png" alt="">
                 <span class='front__heading'>transform your bathroom</span>
             </div>
             <hr class="front__hr">
             <div class="front__bottom">
-                <img src="/images/home-value.png" alt="">
+                <img src="/images/icons/home-value.png" alt="">
                 <span class='front__heading'>boost your home value</span>
             </div>
         </div>
@@ -58,37 +68,36 @@
         <div class='front-gallery__images'>
             <div class='image-container'>
                 <div class='image-container__inner'>
-                    <img class='image-container__img' src="/images/masterbath_highend-1.jpg">
+                    <img class='image-container__img' src="/images/gallery/masterbath_highend-1.jpg">
                     <p>Highend master bathroom with free standing tub, standing shower, and large tiles with wall pattern</p>
                 </div>
             </div>
             <div class='image-container'>
                 <div class='image-container__inner'>
-                    <img class='image-container__img' src="/images/masterbath_woodbridge-3.jpeg">  
+                    <img class='image-container__img' src="/images/gallery/masterbath_woodbridge-3.jpeg">  
                     <p>Spacious master bathroom with addition of standing shower and new tiles</p>
                 </div>
             </div>  
             <div class='image-container'>
                 <div class='image-container__inner'>
-                    <img class='image-container__img' src="/images/masterbath_1.jpeg">     
+                    <img class='image-container__img' src="/images/gallery/masterbath_1.jpeg">     
                     <p>Addition of standing shower in master bathroom</p>
                 </div>
             </div>
             <div class='image-container'>
                 <div class='image-container__inner'>
-                    <img class='image-container__img' src="/images/basement-1.jpeg">
+                    <img class='image-container__img' src="/images/gallery/basement-1.jpeg">
                     <p>Simplistic standing shower.</p>
                 </div>
             </div>
         </div>
         <div class="front-gallery__footer">
             <div class='front-gallery__footer-see-more'>
-                <h2>See More</h2>
-                <ion-icon name="arrow-down-outline"></ion-icon>
-                <button>view gallery slideshow</button>    
+                <button id='btn-gallery'>See All</button>    
             </div>    
         </div>
     </section>
+
     <section id='services'>
         <div class='heading'>
             <h2 class='heading__title'>Why work with Peel Renovations?</h2>
@@ -96,7 +105,7 @@
         </div>
         <div class="services">
         <div class='service'>
-            <img src="/images/specialization.png" alt="">
+            <img src="/images/icons/specialization.png" alt="">
             <!-- <i class="fa fa-bath service__icon"></i>                 -->
             <h2 class='service__heading'>Specialized service</h2>
             <p>
@@ -105,14 +114,14 @@
         </div>
      
         <div class='service'>
-            <img src="/images/worksmanship.png" alt="">
+            <img src="/images/icons/worksmanship.png" alt="">
             <!-- <ion-icon name="construct-outline"></ion-icon> -->
             <h2 class='service__heading'>Highly Experienced</h2>
             <p>With over 11 years experience in home renovations, we have the skillset to take on any project big or small from start to completion.</p>    
         </div>
        
         <div class='service'>
-            <img src="/images/design.png" alt="">
+            <img src="/images/icons/design.png" alt="">
             <!-- <ion-icon name="home-outline"></ion-icon> -->
             <h2 class='service__heading'>Free Design Consulation</h2>
             <p>We will work with you in carefully planning and creating the perfect bathroom in the available space and within your budget.</p>    
@@ -141,7 +150,7 @@
         
       </div>
 
-        <img class='logo'src="/images/logo-dark.jpg">
+        <img class='logo'src="/images/icons/logo-dark.jpg">
         <div class="footer-icons">
             <ion-icon name="person-sharp"></ion-icon>
             <p>Bhupinder Dhammu</p>    
@@ -158,27 +167,6 @@
         <div id='copyright'>&copy; peel renovations inc. all right reserved 2021.</div>
     </footer>
 
-    <div class="gallery-modal">
-        <ion-icon class='gallery-modal__close-icon' name="close-outline"></ion-icon>
-        <span class='count'></span>
-        <div id="gallery">
-            <img class='img-1 gallery-img' src="/images/masterbath_highend-1.jpg">
-            <img class='img-3 gallery-img' src="/images/masterbath_highend-3.jpeg">    
-            <img class='img-4 gallery-img' src="/images/masterbath_highend-4.jpeg">   
-            <img class='img-5 gallery-img' src="/images/masterbath_woodbridge-2.jpeg">   
-            <img class='img-6 gallery-img' src="/images/masterbath_woodbridge-3.jpeg">     
-            <img class='img-7 gallery-img' src="/images/masterbath-vanity.jpeg">   
-            <img class='img-8 gallery-img' src="/images/basement-1.jpeg">   
-            <img class='img-9 gallery-img' src="/images/basement-2.jpeg">   
-            <img class='img-10 gallery-img' src="/images/basement-3.jpeg">   
-            <img class='img-11 gallery-img' src="/images/masterbath_1.jpeg">     
-            <img class='img-12 gallery-img' src="/images/masterbath_2.jpeg">     
-        </div>
-        <div class="gallery-modal__nextprev-icons">
-            <ion-icon class='gallery-modal__back-icon' name="chevron-back-sharp"></ion-icon>    
-            <ion-icon class='gallery-modal__next-icon' name="chevron-forward-outline"></ion-icon>
-        </div>
-    </div>
 
 <script src='/hammer.js'></script>
 <script src="https://unpkg.com/ionicons@5.4.0/dist/ionicons.js"></script>

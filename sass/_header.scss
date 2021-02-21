@@ -25,20 +25,57 @@ header{
 //         margin: 0 0 0 0.5rem;
 //     }
 // }
-.header-top{
-    padding: 0.5rem 0;
+.header{
+    padding: 0.5rem 1rem;
     display: flex;
     justify-content: space-between;
     align-items: center;
     background-color: white;
 
-    &__logo{
-        width: 13rem;
-    }
-    &__icon{
+    &__icon-phone{
         font-size: 2rem;
-        margin-right: 1rem; 
+        color: base.$col-cta;
+    }
+
+    &__logo{
+        max-width: 15rem;
+    }
+    &__icon-menu{
+        font-size: 2rem;
         color: base.$col-main;
+    }
+
+    &__horizontal-menu{
+        display: none;
+        color: black;
+        list-style-type: none;
+
+
+        li{
+            margin-left: 2rem;
+        }
+        
+    }
+
+}
+
+@media (min-width: 700px){
+    .header__horizontal-menu{
+        flex-grow: 1;
+        display: flex;
+        justify-content: flex-end;
+
+    }
+
+    .header__icon-phone, .header__icon-menu{
+        display: none;
+    }
+ 
+}
+
+@media (max-width: 400px){
+    .header__logo{
+        width: 50%;
     }
 }
 
