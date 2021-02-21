@@ -2,7 +2,9 @@
 
 
 .front-gallery{
-    background-color: base.$col-gallery-background;
+    background-image: url('/images/test.jpg');
+    // background-color: base.$col-gallery-background;
+    color: white;
 
     &__heading{
         font-size: 2rem;
@@ -57,16 +59,16 @@
     animation: test 2s;
 
     &__inner{
-        padding:0.5rem;
-        background-color: lighten(base.$col-main, 70%);
-        box-shadow: 3px 3px 5px 2px rgb(95, 90, 90);
+        padding: 0.4rem;
+        background-color: white;
+        box-shadow: 3px 3px 7px 4px rgb(95, 90, 90);
 
         p{
             height: 3rem;
             display: flex;
             align-items: center;
             justify-content: center;
-            padding: 2rem 0;
+            padding: 3rem 1rem;
         }
     }
 

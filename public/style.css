@@ -7,7 +7,7 @@ body {
   margin: 0;
   padding: 0;
   font-family: "Roboto", Helvetica, Arial, sans-serif;
-  background-color: white;
+  background-color: #F9F9F9;
   box-sizing: border-box;
 }
 
@@ -227,7 +227,8 @@ header {
 }
 
 .front-gallery {
-  background-color: #b4bac0;
+  background-image: url("/images/test.jpg");
+  color: white;
 }
 .front-gallery__heading {
   font-size: 2rem;
@@ -280,16 +281,16 @@ header {
   animation: test 2s;
 }
 .image-container__inner {
-  padding: 0.5rem;
-  background-color: #f0effa;
-  box-shadow: 3px 3px 5px 2px #5f5a5a;
+  padding: 0.4rem;
+  background-color: white;
+  box-shadow: 3px 3px 7px 4px #5f5a5a;
 }
 .image-container__inner p {
   height: 3rem;
   display: flex;
   align-items: center;
   justify-content: center;
-  padding: 2rem 0;
+  padding: 3rem 1rem;
 }
 .image-container__img {
   width: 100%;
