@@ -2,15 +2,15 @@
 
 
 .front-gallery{
-    background-image: url('/images/test.jpg');
+    background-image: url('/images/test-2.jpg');
     // background-color: base.$col-gallery-background;
-    color: white;
 
     &__heading{
         font-size: 2rem;
         font-weight: 100;
         text-align: center;
         padding: 2rem;
+        text-shadow: 0px 0px 7px white;
     }
 
     &__images{

@@ -227,14 +227,14 @@ header {
 }
 
 .front-gallery {
-  background-image: url("/images/test.jpg");
-  color: white;
+  background-image: url("/images/test-2.jpg");
 }
 .front-gallery__heading {
   font-size: 2rem;
   font-weight: 100;
   text-align: center;
   padding: 2rem;
+  text-shadow: 0px 0px 7px white;
 }
 .front-gallery__images {
   display: flex;
