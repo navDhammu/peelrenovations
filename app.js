@@ -10,15 +10,16 @@ const io = new IntersectionObserver(function (entries, x){
       }
     }
 }, {
-    rootMargin: '0px 0px -100px 0px'
-});
+    threshold: [0.25]
+}
+);
 
 images.forEach(image => io.observe(image));
 
 document.querySelectorAll('[data-src]').forEach(img => {
     img.addEventListener('load', ()=>{
-        console.log('loaded');
-        img.style.transform = 'translateY(0)';
+        img.style.transform = 'translate(0)';
+        img.style.opacity = '1';
 });
 });
 
