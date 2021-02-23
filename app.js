@@ -1,140 +1,31 @@
+const images = document.querySelectorAll('[data-src]');
+
+const io = new IntersectionObserver(function (entries, x){
+    for (let entry of entries){
+      if (entry.isIntersecting){
+          entry.target.src = entry.target.dataset.src;
 
 
+          x.unobserve(entry.target)
+      }
+    }
+}, {
+    rootMargin: '0px 0px -100px 0px'
+});
+
+images.forEach(image => io.observe(image));
+
+document.querySelectorAll('[data-src]').forEach(img => {
+    img.addEventListener('load', ()=>{
+        console.log('loaded');
+        img.style.transform = 'translateY(0)';
+});
+});
 
 
-// setImgCount();
-
-// function setImgCount(){
-//     document.querySelector('.count').textContent = `${imgCount}/${arrImages.length}`;
-// }
-
-// function imgCountIncrease(){
-//     if (imgCount < arrImages.length){
-//         imgCount++;
-//         setImgCount();
-//     }
-// }
-
-// function imgCountDecrease(){
-//     if (imgCount > 1){
-//         imgCount--;
-//         setImgCount();
-//     }
-// }
-
-// function imgCounter(direction){
-//     imgCount = direction === 'up' ? imgCount + 1 : imgCount - 1;
-//     document.querySelector('.count').textContent = `${imgCount}/${arrImages.length}`;
-// }
-
-// const timeout = function (){
-//     setTimeout(()=>{
-//         const checkboxes = Array.from(document.querySelectorAll('.check-box'));
-//         const hiddenCheckboxes = checkboxes.map(label=> label.parentElement.querySelector('input'));
-    
-//         const notChecked = hiddenCheckboxes.filter((box) => !box.checked);
-//         console.log(notChecked)
-//         if (notChecked.length > 0){
-//             document.querySelectorAll('.container__heading-checkbox')[0].style.transform = 'scale(1)';
-//             notChecked[0].click();
-//             timeout();
-//         } else {
-//             document.querySelector('.btn-front').style.transform = 'scale(1)';
-         
-//         }
-//     });
-// }
-
-// window.addEventListener('load', (event) => {
-//     document.querySelector('.container').classList.add('transition');
-//         timeout();
-  
-// });
-
-
-  
-
-// document.addEventListener('DOMContentLoaded', (event) => {
-//     log.textContent = log.textContent + `DOMContentLoaded\n`;
-// });
-
-            
-
-document.querySelector('#btn-gallery')
-        .addEventListener('click', function() {
-            fetch('/images')
-                .then(res => res.json())
-                .then(images => {
-                    const html = images.map(img => {
-                                    return `<div class='image-container'>
-                                                <div class='image-container__inner'>
-                                                    <img class='image-container__img' src="/images/fetch-gallery/${img}">  
-                                                </div>
-                                            </div>`
-                                }).join('');
-                    document.querySelector('.front-gallery__images')
-                            .insertAdjacentHTML('beforeend', html);
-                });
-            this.remove();
-        });
 
 
    
-
-        
-        
-
-// document.querySelector('.gallery-modal__close-icon')
-//         .addEventListener('click', ()=>{
-//             galleryModal.style.display='none';
-//         });
-
-
-// document.querySelector('.gallery-modal__next-icon')
-//         .addEventListener('click', () => {
-//             moveGallery('next');
-//         });
-           
-
-// document.querySelector('.gallery-modal__back-icon')
-//         .addEventListener('click', () => moveGallery('prev'));
-
-
-
-
-
-
-// function moveGallery(direction){
-//     const last = gallery.lastElementChild;
-//     const first = gallery.firstElementChild;
-//     let condition, position, ele;
-
-//     if (direction === 'next') {
-//         imgCountIncrease();
-//         condition = firstInitial !== last;
-//         position = 'afterbegin';
-//         ele = last;
-//     } else if (direction === 'prev') {
-//         imgCountDecrease();
-//         condition = lastInital !== last;
-//         position = 'beforeend';
-//         ele = first;
-//     }
-
-//     if (condition){
-//         gallery.insertAdjacentElement(position, ele);
-//     } 
-//     if (imgCount === arrImages.length) {
-//         nextArrow.style.visibility = 'hidden';
-//     } else if (imgCount === 1) {
-//         backArrow.style.visibility = 'hidden';
-//     } else if (nextArrow.style.visibility === 'hidden'){
-//             nextArrow.style.visibility = 'visible';
-//     } else if (backArrow.style.visibility === 'hidden'){
-//             backArrow.style.visibility = 'visible';
-//         }
-    
-// }
 
 
 

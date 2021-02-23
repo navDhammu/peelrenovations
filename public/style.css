@@ -226,25 +226,41 @@ header {
   text-transform: capitalize;
 }
 
-#front-gallery__heading {
+.front-gallery {
+  background-image: url("/images/test-2.jpg");
+}
+.front-gallery__heading {
   font-size: 2rem;
   font-weight: 100;
   text-align: center;
   padding: 2rem;
   text-shadow: 0px 0px 7px white;
 }
-
-.images {
+.front-gallery__images {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  color: black;
+}
+.front-gallery__footer-quote, .front-gallery__footer-see-more {
   display: flex;
   flex-direction: column;
-  overflow: hidden;
+  justify-content: center;
+  align-items: center;
+  padding: 1rem 0;
 }
-.images img {
-  padding: 1rem;
-  min-width: 100px;
-  min-height: 100px;
-  transform: translateY(100%);
-  transition: transform 1s;
+.front-gallery__footer-quote > *, .front-gallery__footer-see-more > * {
+  margin-bottom: 1rem;
+}
+.front-gallery button {
+  max-width: max-content;
+  font-size: 1rem;
+  text-transform: uppercase;
+  color: white;
+  background: #4CAF50;
+  border: none;
+  border-radius: 2rem;
+  padding: 1rem 3rem;
 }
 
 @keyframes test {
@@ -257,6 +273,31 @@ header {
     transform: translateY(0);
   }
 }
+.image-container {
+  width: 90%;
+  padding: 1rem;
+  text-align: center;
+  box-sizing: border-box;
+  animation: test 2s;
+}
+.image-container__inner {
+  padding: 0.4rem;
+  background-color: white;
+  box-shadow: 3px 3px 7px 4px #5f5a5a;
+}
+.image-container__inner p {
+  height: 3rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 3rem 1rem;
+  background-color: cadetblue;
+}
+.image-container__img {
+  width: 100%;
+  animation: opacity 2s;
+}
+
 @keyframes opacity {
   0% {
     opacity: 0;
@@ -284,6 +325,64 @@ header {
     justify-content: space-evenly;
   }
 }
+.gallery-modal {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  background-color: black;
+  z-index: 2;
+  color: white;
+}
+.gallery-modal__close-icon {
+  font-size: 2.5rem;
+  position: absolute;
+  right: 0;
+  top: 0;
+  padding: 0.5rem;
+}
+.gallery-modal__nextprev-icons {
+  visibility: hidden;
+  position: absolute;
+  width: 100%;
+  top: 50%;
+  font-size: 3rem;
+  display: flex;
+  justify-content: space-between;
+  z-index: 100;
+  text-shadow: 0 0 5px black;
+}
+.gallery-modal .count {
+  visibility: hidden;
+  position: absolute;
+  top: -10%;
+  left: 50%;
+  transform: translateX(-50%);
+  color: white;
+  font-size: 1.2rem;
+}
+
+.left {
+  transition: left 0.5s;
+}
+
+#gallery {
+  display: flex;
+  position: absolute;
+  top: 50%;
+  width: 100%;
+  height: 70%;
+  transform: translateY(-50%);
+}
+#gallery img {
+  width: 100%;
+  height: auto;
+  box-sizing: border-box;
+  padding: 0 0.5rem;
+}
+
 * {
   margin: 0;
   padding: 0;
