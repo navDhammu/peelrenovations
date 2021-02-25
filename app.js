@@ -1,6 +1,7 @@
 const images = document.querySelectorAll('[data-src]');
 const navBar = document.querySelector('.navigation');
 const banner = document.querySelector('.banner');
+const navLinks = document.querySelector('.navigation__links');
 
 const io = new IntersectionObserver(function (entries, x){
     for (let entry of entries){
@@ -29,8 +30,24 @@ images.forEach(image => io.observe(image));
 
 // navObserver.observe(banner);
 
+document
+    .querySelector('.navigation__bar-icon-menu')
+    .addEventListener('click', ()=>{
+        const isExpanded = navLinks.clientHeight > 0;
+        if (!isExpanded){
+            navLinks.style.height = `${navLinks.scrollHeight}px`;
+        } else {
+            navLinks.style.height = '0';
+        }
+    });
 
 
+navBar.querySelectorAll('a').forEach(a=>{
+    a.addEventListener('click', ()=>{
+        navLinks.style.height = '0';
+        console.log('click a')
+    });
+});
 
 document.querySelectorAll('[data-src]').forEach(img => {
     img.addEventListener('load', ()=>{

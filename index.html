@@ -29,23 +29,26 @@
         </section>
     </header>
     <section class='navigation'>
-        <img class='navigation__logo' src='/images/icons/logo-dark.jpg'>
-        <ion-icon class='navigation__icon-menu' name="menu-sharp"></ion-icon>    
-        <ul class='navigation__horizontal-menu'>
+        <div class="navigation__bar">
+            <img class='navigation__bar-logo' src='/images/icons/logo-dark.jpg'>
+            <ion-icon class='navigation__bar-icon-menu' name="menu-sharp"></ion-icon> 
+        </div>
+           
+        <ul class='navigation__links'>
             <li>
-                home
+                <a href="#about">about</a>
             </li>
             <li>
-                gallery
+                <a href="#front-gallery">project gallery</a>
             </li>
             <li>
-                contact
+                <a href="#contact">contact</a>
             </li>
         </ul>
     </section>
    
 
-    <section class="about">
+    <section id="about">
         <div class="heading">
             <h2>About Peel Renovations</h2>
             <hr>
@@ -113,20 +116,20 @@
 
     <footer>
         <div class="form">  
-        <form id="contact" method="post">
+        <form id="contact" class='kwes-form' action="https://kwes.io/api/foreign/forms/xte43a1LjHFvERtmqSGg">
           <h3>Get A Free Quote</h3>
           <h4>Fill in the info below to request a callback.</h4>
           <fieldset>
-            <input placeholder="Your name" type="text" tabindex="1" required >
+            <input placeholder="Your name" type="text" name='name' tabindex="1" required >
           </fieldset>
           <fieldset>
-            <input placeholder="Your Phone Number" type="tel" tabindex="3" required>
+            <input placeholder="Your Phone Number" type="tel" name='phone'tabindex="3" required>
           </fieldset>
           <fieldset>
-            <textarea placeholder="Tell us about your project...." tabindex="5" required></textarea>
+            <textarea placeholder="Tell us about your project...." tabindex="5" name='message'required></textarea>
           </fieldset>
           <fieldset>
-            <button name="submit" type="submit" id="contact-submit" data-submit="...Sending">Submit</button>
+            <button type="submit">Submit</button>
           </fieldset>
         </form>
         
@@ -151,6 +154,7 @@
 
 
 <script src="https://unpkg.com/ionicons@5.4.0/dist/ionicons.js"></script>
+<script src="https://kwes.io/v2/kwes-script.js" defer></script>
 <script src='/app.js'></script>
 
 
