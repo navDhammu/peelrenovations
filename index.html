@@ -11,40 +11,39 @@
 </head>
 <body>
     <header>
-        <div class='header'>
-            <a href="tel:6476481847">
-                <ion-icon class='header__icon-phone' name="call-sharp"></ion-icon>    
-            </a> 
-            <img class='header__logo' src='/images/icons/logo.png'>
-            <ion-icon class='header__icon-menu' name="menu-sharp"></ion-icon>    
-            <ul class='header__horizontal-menu'>
-                <li>
-                    home
-                </li>
-                <li>
-                    gallery
-                </li>
-                <li>
-                    contact
-                </li>
-            </ul>
-        </div>
+        <section class='banner'>
+            <div class="banner__wrapper-heading-1">
+                <span>Need a bathroom upgrade?</span>
+            </div>
+            <div class="banner__wrapper-heading-2">
+                <span>Let us help you transform your bathroom</span>
+            </div>
+            <a class='banner__see-our-work' href="#front-gallery">see our work</a>
+            <svg 
+                class='banner__down-arrow'
+                style="enable-background:new 0 0 512 512;" version="1.1" 
+                viewBox="0 0 512 512" width="512px" xml:space="preserve" xmlns="http://www.w3.org/2000/svg" 
+                xmlns:xlink="http://www.w3.org/1999/xlink">
+                <polygon points="396.6,160 416,180.7 256,352 96,180.7 115.3,160 256,310.5 "/>
+            </svg>
+        </section>
     </header>
-
-    <section class='front-banner'>
-        <div class="front">
-            <div class="front__top">
-                <img src="/images/icons/diamond.png" alt="">
-                <span class='front__heading'>transform your bathroom</span>
-            </div>
-            <hr class="front__hr">
-            <div class="front__bottom">
-                <img src="/images/icons/home-value.png" alt="">
-                <span class='front__heading'>boost your home value</span>
-            </div>
-        </div>
-        <button class='btn-gallery btn-front'>see our work</button>
+    <section class='navigation'>
+        <img class='navigation__logo' src='/images/icons/logo-dark.jpg'>
+        <ion-icon class='navigation__icon-menu' name="menu-sharp"></ion-icon>    
+        <ul class='navigation__horizontal-menu'>
+            <li>
+                home
+            </li>
+            <li>
+                gallery
+            </li>
+            <li>
+                contact
+            </li>
+        </ul>
     </section>
+   
 
     <section class="about">
         <div class="heading">
@@ -83,7 +82,7 @@
 
     <section id='services'>
         <div class='heading'>
-            <h2 class='heading__title'>Why work with Peel Renovations?</h2>
+            <h2 class='heading__title'>Why Choose Us?</h2>
             <hr>
         </div>
         <div class="services">
@@ -115,8 +114,8 @@
     <footer>
         <div class="form">  
         <form id="contact" method="post">
-          <h3>Get In Touch</h3>
-          <h4>Contact us for a free quote and consultation</h4>
+          <h3>Get A Free Quote</h3>
+          <h4>Fill in the info below to request a callback.</h4>
           <fieldset>
             <input placeholder="Your name" type="text" tabindex="1" required >
           </fieldset>

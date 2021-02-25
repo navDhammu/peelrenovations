@@ -1,20 +1,36 @@
 const images = document.querySelectorAll('[data-src]');
+const navBar = document.querySelector('.navigation');
+const banner = document.querySelector('.banner');
 
 const io = new IntersectionObserver(function (entries, x){
     for (let entry of entries){
       if (entry.isIntersecting){
           entry.target.src = entry.target.dataset.src;
-
-
           x.unobserve(entry.target)
       }
     }
 }, {
-    threshold: [0.25]
+    rootMargin: '0px 0px -33% 0px'
 }
 );
 
 images.forEach(image => io.observe(image));
+
+// const navObserver = new IntersectionObserver((entries, observer)=>{
+//     console.log(entries[0])
+//     if (!entries[0].isIntersecting){
+//         navBar.classList.add('fixed-nav');
+//     } else if (entries[0].isIntersecting){
+//         navBar.classList.remove('fixed-nav');
+//     }
+// }, {
+//     rootMargin: '0px 0px -99% 0px'
+// });
+
+// navObserver.observe(banner);
+
+
+
 
 document.querySelectorAll('[data-src]').forEach(img => {
     img.addEventListener('load', ()=>{
@@ -23,7 +39,27 @@ document.querySelectorAll('[data-src]').forEach(img => {
 });
 });
 
+document.querySelector('.banner').addEventListener('animationstart', function (){
+    const arrow = document.querySelector('.banner__down-arrow');
 
+   function transitionOne(){
+        for (let x of ['1','2']){
+            document.querySelector(`.banner__wrapper-heading-${x}`).style.transform = 'translateX(0)';
+        }
+   }
+
+   function transitionTwo(){
+        document.querySelector('.banner__see-our-work').style.transform = 'translate(0)';
+        arrow.style.transform = 'translate(0)';
+   }
+
+    setTimeout(transitionOne, 1000)
+    setTimeout(transitionTwo, 1500)
+    setTimeout(() => {
+        arrow.style.animation = 'arrow 1s infinite'
+    }, 2500);
+
+});
 
 
    

@@ -1,41 +1,24 @@
 @use 'base';
 
 header{
-    position: fixed;
-    top:0;
     width: 100%;
-    padding: 0;
     z-index: 1;
     color:white;
+    background-color: transparent;
 }
 
-// .header-bottom{
-//     display: flex;
-//     background-color: base.$col-main;
-//     color: white;
-//     text-transform: capitalize;
-//     padding: 0.3rem;
-//     justify-content: center;
-//     font-size: 0.8rem;
 
-//     ion-icon{
-//         font-size: 1.2rem;
-//     }
-//     p{
-//         margin: 0 0 0 0.5rem;
-//     }
-// }
-.header{
+.navigation{
+    position: -webkit-sticky;
+    position: sticky;
+    top:0;
     padding: 0.5rem 1rem;
     display: flex;
     justify-content: space-between;
     align-items: center;
-    background-color: white;
-
-    &__icon-phone{
-        font-size: 2rem;
-        color: base.$col-cta;
-    }
+    background-color: base.$col-main;
+    color: white;
+    z-index: 5;
 
     &__logo{
         max-width: 15rem;
@@ -59,38 +42,33 @@ header{
 
 }
 
+.fixed-nav{
+    position: fixed;
+    top:0;
+    left:0;
+    width: 100%;
+}
+
 @media (min-width: 700px){
-    .header__horizontal-menu{
+    .navigation__horizontal-menu{
         flex-grow: 1;
         display: flex;
         justify-content: flex-end;
 
     }
 
-    .header__icon-phone, .header__icon-menu{
+    .navigation__icon-phone, .navigation__icon-menu{
         display: none;
     }
  
 }
 
 @media (max-width: 400px){
-    .header__logo{
+    .navigation__logo{
         width: 50%;
     }
 }
 
-.view-gallery{
-    display: flex;
-    justify-content: center;
-    text-transform: uppercase;
-    font-size: 0.8rem;
-    p{
-        margin:0;
-
-    }
-    padding: 0.3rem;
-    background-color: base.$col-cta;
-}
 
 
 

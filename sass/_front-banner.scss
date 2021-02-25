@@ -1,9 +1,3 @@
-$checked-color: #ffffff;
-$unchecked-color: white;
-$checkbox-height: 1.5rem;
-$background-color:#667788;
-$font-color:#efefef;
-$duration: .4s;
 
 @use 'base';
 
@@ -11,77 +5,72 @@ $duration: .4s;
     0%{opacity: 0}
     100%{opacity: 1}
 }
-
-.front-banner{
-    height: 80vh;
-    background: linear-gradient(
-        rgba(0, 0, 0, 0),
-        rgba(0, 0, 0, 0)
-      ), url('/images/front-banner.jpg');
-    background-size: cover;
-    background-position: center;
-    animation-name: animate;
-    animation-duration: 3s;
+@keyframes arrow{
+    0% {}
+    50% {transform: translateY(30px)}
+    100% {transform: translateY(0)}
 }
 
-//animation
-  
- 
-.front{
-    position: absolute;
-    width: 100%;
-    height: 80vh;   
-    box-sizing: border-box;
+.banner{
+    height: 100vh;
+    width: 100vw;
+    background: linear-gradient(
+        rgba(0, 0, 0, 0.3),
+        rgba(0, 0, 0, 0.3)
+      ), url('/images/gallery/basement-1.jpeg');
+    background-size: cover;
+    background-position: center;
+    animation: animate 2s;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
     text-align: center;
-
-    &__hr{
-        border: 2px solid base.$col-main;
-        width: 30%;
-        margin: 1rem 0;
+    overflow: hidden;
+    *{
+        margin-top: 2rem;
     }
 
-    &__heading{
-        text-transform: uppercase;
-        font-size: 2rem;
-        font-weight: 800;
-        text-shadow: 0 0 4px black;
-        margin-top: 1rem;
+    &__wrapper-heading-1, &__wrapper-heading-2{
+        width: 100%;
+        transition: transform 1s;
 
-    }
-
-    &__top, &__bottom{
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        justify-content: space-evenly;
-        margin-top: 1rem;
-        color: white;
-
-        img{
-            width: 20%;
+        span{
+            width:fit-content;
+            text-transform: uppercase;
+            font-size: 2rem;
+            font-weight: 800;
+            text-shadow: 0 0 4px black;
         }
-
-      
-
     }
 
-   
-    
-    button{
-        width: 90%;
-        font-size: 1rem;
-        text-transform: uppercase;
+    &__wrapper-heading-1{
+        transform: translateX(100%)
+    }
+    &__wrapper-heading-2{
+        transform: translateX(-100%)
+    }
+      
+    &__see-our-work{
+        padding: 1rem;
+        background: transparent;
+        border: 2px solid white;
         color: white;
-        background: base.$col-cta;
-        border: none;
-        border-radius: 2rem;
-        padding: 0.7rem;
-        transform: scale(0);
-        transition: transform 3s;
+        text-transform: capitalize;
+        text-decoration: none;
+        transform: translateY(300px);
+        transition: transform 1s;
+    }
+
+    &__down-arrow{
+        margin-top: 1rem;
+        fill: white;
+        height: 2.5rem;
+        width: 2.5rem;
+        transform: translateY(300px);
+        transition: transform 1s;
+        // animation: arrow 1s;
+        // animation-iteration-count: infinite;
     }
 }
 
