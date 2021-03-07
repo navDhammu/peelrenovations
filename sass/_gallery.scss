@@ -1,7 +1,7 @@
 @use 'base';
 
 #front-gallery{
-
+    
     &__heading{
         font-size: 2rem;
         font-weight: 100;
@@ -18,18 +18,19 @@
     padding: 0 1rem;
     overflow: hidden;
     img{
-        margin-bottom: 2rem;
+        z-index: -5;
+        margin-bottom: 4rem;
         width: 100%;
-        min-height: 200px;
-        opacity: 0;
-        transform: translateY(30px);
-        transition: transform 1s, opacity 1s;
+        filter: blur(15px);
+        transition: filter 0.5s;
         border-radius: 0.5rem;
         box-shadow: 4px 4px 5px rgb(76, 75, 75);
     }
+    :last-child{
+        margin-bottom: 1rem;
+    }
 
 }
-
 
 
 @keyframes test {

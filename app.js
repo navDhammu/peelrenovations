@@ -3,51 +3,44 @@ const navBar = document.querySelector('.navigation');
 const banner = document.querySelector('.banner');
 const navLinks = document.querySelector('.navigation__links');
 
+
+
 const io = new IntersectionObserver(function (entries, x){
     for (let entry of entries){
-      if (entry.isIntersecting){
+        if (entry.isIntersecting){
           entry.target.src = entry.target.dataset.src;
+          entry.target.style.filter = 'none';
           x.unobserve(entry.target)
       }
     }
+    
 }, {
-    rootMargin: '0px 0px -33% 0px'
-}
-);
+    rootMargin: '0px 0px -80% 0px'
+});
+
+
 
 images.forEach(image => io.observe(image));
-
-// const navObserver = new IntersectionObserver((entries, observer)=>{
-//     console.log(entries[0])
-//     if (!entries[0].isIntersecting){
-//         navBar.classList.add('fixed-nav');
-//     } else if (entries[0].isIntersecting){
-//         navBar.classList.remove('fixed-nav');
-//     }
-// }, {
-//     rootMargin: '0px 0px -99% 0px'
-// });
-
-// navObserver.observe(banner);
-
-document
-    .querySelector('.navigation__bar-icon-menu')
-    .addEventListener('click', ()=>{
-        const isExpanded = navLinks.clientHeight > 0;
-        if (!isExpanded){
-            navLinks.style.height = `${navLinks.scrollHeight}px`;
-        } else {
-            navLinks.style.height = '0';
-        }
-    });
+// document
+//     .querySelectorAll('[data-query]')
+//     .forEach(ele => {
+//         sectionObserver.observe(document.querySelector(ele.dataset.query))
+//     });
 
 
-navBar.querySelectorAll('a').forEach(a=>{
-    a.addEventListener('click', ()=>{
-        navLinks.style.height = '0';
-        console.log('click a')
-    });
-});
+// document
+//     .querySelector('.navigation__bar-icon-menu')
+//     .addEventListener('click', ()=>{
+//         const isExpanded = navLinks.clientHeight > 0;
+//         if (!isExpanded){
+//             navLinks.style.height = `${navLinks.scrollHeight}px`;
+//         } else {
+//             navLinks.style.height = '0';
+//         }
+//     });
+
+
+
 
 document.querySelectorAll('[data-src]').forEach(img => {
     img.addEventListener('load', ()=>{
@@ -67,14 +60,11 @@ document.querySelector('.banner').addEventListener('animationstart', function ()
 
    function transitionTwo(){
         document.querySelector('.banner__see-our-work').style.transform = 'translate(0)';
-        arrow.style.transform = 'translate(0)';
    }
 
     setTimeout(transitionOne, 1000)
     setTimeout(transitionTwo, 1500)
-    setTimeout(() => {
-        arrow.style.animation = 'arrow 1s infinite'
-    }, 2500);
+   
 
 });
 
