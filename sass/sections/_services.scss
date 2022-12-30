@@ -1,0 +1,19 @@
+.services {
+   padding: 1rem;
+   &__heading {
+      width: 100%;
+   }
+
+   &__cards {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 1rem;
+      .card {
+         flex-basis: 300px;
+         padding: 1rem;
+         font-weight: 100;
+         //  border: 1px solid black;
+      }
+   }
+}

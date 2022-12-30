@@ -1,0 +1,40 @@
+@use '../components/buttons';
+@use '../base/variables';
+
+.images-container {
+   display: flex;
+   flex-wrap: wrap;
+   gap: 1rem;
+   justify-content: center;
+}
+
+.img {
+   width: 250px;
+   height: 200px;
+   object-fit: cover;
+
+   &:with &:hover {
+      opacity: 0.8;
+   }
+}
+.img-zoom {
+   // width: 700px;
+   // height: 400px;
+   // object-fit: cover;
+   position: absolute;
+   left: 50%;
+   top: 50%;
+   transform: translate(-50%, -50%);
+}
+
+.options {
+   display: flex;
+   list-style-type: none;
+   gap: 1rem;
+   margin-bottom: 1rem;
+   button {
+      @extend %btn-md;
+      border: 1px solid rgb(179, 176, 176);
+      border-radius: 2rem;
+   }
+}

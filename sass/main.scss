@@ -1,11 +1,34 @@
-@use 'base';
-@use 'header';
-@use 'front-banner';
-@use 'about';
-@use 'services';
-@use 'gallery';
-@use 'contact';
-@use 'footer';
-@use 'navigation';
+@use './base/index';
+@use './sections/contact';
+@use './sections/header';
+@use './sections/front-banner';
+@use './sections/services';
+@use './sections/gallery';
+@use './sections/footer';
+@use './sections/navigation';
 
+.section {
+   padding: 1rem;
+   display: flex;
+   flex-direction: column;
+   align-items: center;
+   &__heading {
+      margin-bottom: 1rem;
+      text-align: center;
+      text-decoration: underline;
+   }
+}
 
+.modal {
+   z-index: 999;
+   background-color: rgba(19, 18, 18, 0.822);
+   position: fixed;
+   top: 0;
+   left: 0;
+   height: 100vh;
+   width: 100vw;
+}
+
+.hidden {
+   display: none;
+}

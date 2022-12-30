@@ -1,0 +1,23 @@
+@use '../base/variables';
+
+.footer {
+   // position: relative;
+   background-color: variables.$col-lightgray;
+   font-size: 16px;
+   line-height: 1.5rem;
+
+   &__wrapper {
+      display: flex;
+      align-items: center;
+   }
+   img {
+      width: 400px;
+   }
+}
+
+#copyright {
+   text-transform: capitalize;
+   text-align: center;
+   color: gray;
+   padding: 0.5rem;
+}

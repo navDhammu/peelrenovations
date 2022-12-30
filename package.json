@@ -1,0 +1,19 @@
+{
+  "name": "peelrenovations",
+  "version": "1.0.0",
+  "description": "",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/navDhammu/peelrenovations.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/navDhammu/peelrenovations/issues"
+  },
+  "homepage": "https://github.com/navDhammu/peelrenovations#readme"
+}

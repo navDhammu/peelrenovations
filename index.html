@@ -1,196 +1,129 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <!-- <script src="https://use.fontawesome.com/9aff792488.js"></script> -->
+   <head>
+      <!-- <script src="https://use.fontawesome.com/9aff792488.js"></script> -->
 
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Peel Renovations - bathroom specialists</title>
-    <link rel="stylesheet" href="./style.css">
-
-</head>
-<body>
-    <header id='header'>
-        <section class='banner'>
-            <img id='logo' src="images/icons/logo (1).svg" alt="logo">
-            <div class="banner__wrapper-heading-1">
-                <span>Need a bathroom upgrade?</span>
+      <meta charset="UTF-8" />
+      <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+      <title>Peel Renovations - bathroom specialists</title>
+      <link rel="stylesheet" href="./style.css" />
+   </head>
+   <body>
+      <header id="header"></header>
+      <section class="banner">
+         <img class="banner__logo" src="images/icons/logo (1).svg" alt="logo" />
+         <div class="banner__wrapper">
+            <div class="banner__main-text">
+               Specializing in
+               <span class="emphasis"> bathroom </span> renovations from basic to high-end
             </div>
-            <div class="banner__wrapper-heading-2">
-                <span>get a free in home estimate</span>
+            <div class="flex-container">
+               <button class="banner__btn-main">See Our Work</button>
+               <button class="banner__btn-sec">
+                  Get Free Estimate
+               </button>
             </div>
-            <a class='banner__see-our-work' href="tel:6476481847">
-                <svg version="1.1" xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 32 32">
-                    <path d="M22 20c-2 2-2 4-4 4s-4-2-6-4-4-4-4-6 2-2 4-4-4-8-6-8-6 6-6 6c0 4 4.109 12.109 8 16s12 8 16 8c0 0 6-4 6-6s-6-8-8-6z"></path>
-                </svg>
-                <span>schedule appointment</span>
-            </a>
-           
-        </section>
-    </header>
+         </div>
+      </section>
+      <section class="section">
+         <h2 class="section__heading">Our Services</h2>
+         <div class="services__cards">
+            <div class="card">
+               <h3>Complete Existing Bathroom Renovation</h3>
+               <p>
+                  Transform your old bathroom into a brand new one with latest design trends and high-quality materials.
+                 We will take care of everything from design to construction work. 
+               </p>
+            </div>
+            <div class="card">
+               <h3>New Bathroom Construction</h3>
+               <p>
+                  Get a new bathroom built in your home! We provide a free consultation where
+                  we create a customized plan according to your requirements, budget, and available space.
+               </p>
+            </div>
+            <div class="card">
+               <h3>Partial Upgrade</h3>
+               <p>
+                  Only want to upgrade part of your bathroom? We can help in
+                  replacing and/or upgrading your bathtub, shower, toilet seat,
+                  or vanity. 
+               </p>
+            </div>
 
-    <section id="about">
-        <div class="heading">
-            <h2>About</h2>
-            <hr>
-        </div>
-        <img src="/images/van-removebg-preview.png" alt="van">
-        <p> Peel Renovations is a home renovation contractor specializing in bathrooms
-            located in Brampton, ON. <br><br>
-            We are experts in designing, planning, and performing all work related 
-            to bathroom renovation - from demolition to finish. <br><br>
-            See some of our recent projects below.
-        </p>
-    </section>
-       
-    <section id='front-gallery'>
-        <div class='heading'>
-            <h2 class='heading__title'>Recent Projects</h2>
-            <hr>   
-        </div>
-        <div class='images'>
-                <img 
-                    src="./images/gallery-tiny/masterbath_highend-1.webp"
-                    data-src="./images/gallery/masterbath_highend-1.jpg">
-                <img 
-                    src="./images/gallery-tiny/masterbath_highend-3.webp"
-                    data-src="./images/gallery/masterbath_highend-3.jpeg">
-                <img 
-                    src="./images/gallery-tiny/basement-1.webp"
-                    data-src="./images/gallery/basement-1.webp">
-                <img 
-                    src="./images/gallery-tiny/basement-2.webp"
-                    data-src="./images/gallery/basement-2.jpeg">
-                <img 
-                    src="./images/gallery-tiny/bath_standing-shower.webp"
-                    data-src="./images/gallery/bath_standing-shower.jpeg">
-                <img 
-                    src="./images/gallery-tiny/bath_vanity-2.webp"
-                    data-src="./images/gallery/bath_vanity-2.jpeg">
-                <img 
-                    src="./images/gallery-tiny/bath_vanity.webp"
-                    data-src="./images/gallery/bath_vanity.jpeg">
-                <img 
-                    src="./images/gallery-tiny/masterbath_1.webp"
-                    data-src="./images/gallery/masterbath_1.jpeg">
-                <img 
-                    src="./images/gallery-tiny/masterbath_woodbridge-1.webp"
-                    data-src="./images/gallery/masterbath_woodbridge-1.jpg">
-                <img 
-                    src="./images/gallery-tiny/masterbath_woodbridge-3.webp"
-                    data-src="./images/gallery/masterbath_woodbridge-3.jpeg">
-        </div>
-       
-    </section>
+         </div>
+      </section>
+      <section class="section">
+         <h2 class="section__heading">Completed Projects</h2>
+         <p style='margin-bottom: 1rem'>Below are some of our recently completed projects. Work with us to get your bathroom in this list!</p>
+         <ul class="options">
+            <li class="options__list"><button class="options__list-item">All</button></li>
+               <li class="options__list"><button class="options__list-item">Powder rooms</button></li>
+               <li class="options__list"><button class="options__list-item">Master bathrooms</button></li>
+               <li class="options__list"><button class="options__list-item">High-end</button></li>
+               <li class="options__list"><button class="options__list-item">Basic</button></li>
+            </li>
+         </ul>
+         <div class="images-container"></div>
+      </section>
+      <section class="section">
+         <h2 class="section__heading">Our Reviews</h2>
+         <div class="">Reviews</div>
+      </section>
+      <div class="modal hidden"></div>
+      <!-- <footer class="footer">
+         <div class="footer__wrapper">
+            <div id="form">
+               <form
+                  id="contact"
+                  class="kwes-form"
+                  action="https://kwes.io/api/foreign/forms/xte43a1LjHFvERtmqSGg"
+               >
+                  <h3>Get A Free Quote</h3>
+                  <h4>Fill in the info below to request a callback.</h4>
+                  <fieldset>
+                     <input
+                        placeholder="Your name"
+                        type="text"
+                        name="name"
+                        tabindex="1"
+                        required
+                     />
+                  </fieldset>
+                  <fieldset>
+                     <input
+                        placeholder="Your Phone Number"
+                        type="tel"
+                        name="phone"
+                        tabindex="3"
+                        required
+                     />
+                  </fieldset>
+                  <fieldset>
+                     <textarea
+                        placeholder="Tell us about your project...."
+                        tabindex="5"
+                        name="message"
+                        required
+                     ></textarea>
+                  </fieldset>
+                  <fieldset>
+                     <button type="submit">Submit</button>
+                  </fieldset>
+               </form>
+            </div>
+            <img
+               src="./images/gallery/photo.jpeg"
+               alt="photo of owner with van"
+               srcset=""
+            />
+         </div>
+         <div id="copyright">
+            &copy; peel renovations inc. all right reserved 2021.
+         </div>
+      </footer> -->
 
-    <section id='services'>
-        <div class='heading'>
-            <h2 class='heading__title'>Why Choose Us?</h2>
-            <hr>
-        </div>
-        <div class="services">
-        <div class='service'>
-            <img src="/images/icons/specialization.png" alt="">
-            <!-- <i class="fa fa-bath service__icon"></i>                 -->
-            <h2 class='service__heading'>Specialists</h2>
-            <p>
-                We are specialists in bathroom renovations. This allows us to be highly focused and efficient in one area of expertise.
-            </p>
-        </div>
-     
-        <div class='service'>
-            <img src="/images/icons/worksmanship.png" alt="">
-            <!-- <ion-icon name="construct-outline"></ion-icon> -->
-            <h2 class='service__heading'>Highly Experienced</h2>
-            <p>With over 11 years experience in home renovations, we have the skillset to take on any project big or small from start to completion.</p>    
-        </div>
-       
-        <div class='service'>
-            <img src="/images/icons/design.png" alt="">
-            <!-- <ion-icon name="home-outline"></ion-icon> -->
-            <h2 class='service__heading'>Free Design Consulation</h2>
-            <p>We will work with you in carefully planning and creating the perfect bathroom in the available space and within your budget.</p>    
-        </div>
-    </div>
-</section>
-
-    <footer>
-        <div id="form">  
-        <form id="contact" class='kwes-form' action="https://kwes.io/api/foreign/forms/xte43a1LjHFvERtmqSGg">
-          <h3>Get A Free Quote</h3>
-          <h4>Fill in the info below to request a callback.</h4>
-          <fieldset>
-            <input placeholder="Your name" type="text" name='name' tabindex="1" required >
-          </fieldset>
-          <fieldset>
-            <input placeholder="Your Phone Number" type="tel" name='phone'tabindex="3" required>
-          </fieldset>
-          <fieldset>
-            <textarea placeholder="Tell us about your project...." tabindex="5" name='message'required></textarea>
-          </fieldset>
-          <fieldset>
-            <button type="submit">Submit</button>
-          </fieldset>
-        </form>
-        
-      </div>
-
-        <img class='logo'src="/images/icons/logo-dark.jpg">
-        <div class="footer-icons">
-            <p>Bhupinder Dhammu</p>    
-        </div>
-        <span>Owner</span>
-        <div class="footer-icons call">
-            <a class='call__number' href="callto:6475040015">647-648-1847</a>    
-        </div>
-        <div class="footer-icons follow">
-            <span>Follow</span>
-        </div>
-        <div id='copyright'>&copy; peel renovations inc. all right reserved 2021.</div>
-    </footer>
-
-   
-    <ul class="tab-bar">
-        <li data-num="1" data-section='#header' class="tab wave dark">
-            <svg version="1.1" xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 32 32">
-                <path d="M32 18.451l-16-12.42-16 12.42v-5.064l16-12.42 16 12.42zM28 18v12h-8v-8h-8v8h-8v-12l12-9z"></path>
-            </svg>
-            <span>home</span>
-        </li>
-        <li data-num="2" data-section='#about'class="tab wave dark">
-            <svg version="1.1" xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 32 32">
-                <path d="M14 9.5c0-0.825 0.675-1.5 1.5-1.5h1c0.825 0 1.5 0.675 1.5 1.5v1c0 0.825-0.675 1.5-1.5 1.5h-1c-0.825 0-1.5-0.675-1.5-1.5v-1z"></path>
-                <path d="M20 24h-8v-2h2v-6h-2v-2h6v8h2z"></path>
-                <path d="M16 0c-8.837 0-16 7.163-16 16s7.163 16 16 16 16-7.163 16-16-7.163-16-16-16zM16 29c-7.18 0-13-5.82-13-13s5.82-13 13-13 13 5.82 13 13-5.82 13-13 13z"></path>
-            </svg>
-            <span>about</span>
-        </li>
-        <li data-num="3" data-section='#front-gallery'class="tab wave dark">
-            <svg version="1.1" xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 20 20">
-                <path d="M17.125 6.17l-2.046-5.635c-0.151-0.416-0.595-0.637-0.989-0.492l-13.598 4.963c-0.394 0.144-0.593 0.597-0.441 1.013l2.156 5.941v-3.183c0-1.438 1.148-2.607 2.56-2.607h3.593l4.285-3.008 2.479 3.008h2.001zM19.238 8h-14.471c-0.42 0-0.762 0.334-0.762 0.777v9.42c0.001 0.444 0.343 0.803 0.762 0.803h14.471c0.42 0 0.762-0.359 0.762-0.803v-9.42c0-0.443-0.342-0.777-0.762-0.777zM18 17h-12v-2l1.984-4.018 2.768 3.436 2.598-2.662 3.338-1.205 1.312 3.449v3z"></path>
-            </svg>
-            <span>photos</span>
-        </li>
-        <li data-num="4" data-section='#services' class="tab wave dark">
-            <svg version="1.1" xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 32 32">
-                <path d="M32 12.408l-11.056-1.607-4.944-10.018-4.944 10.018-11.056 1.607 8 7.798-1.889 11.011 9.889-5.199 9.889 5.199-1.889-11.011 8-7.798z"></path>
-            </svg>
-            <span>why us?</span>
-        </li>
-        <li data-num="5" data-section='#form' class="tab wave dark">
-            <svg version="1.1" xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 32 32">
-                <path d="M22 20c-2 2-2 4-4 4s-4-2-6-4-4-4-4-6 2-2 4-4-4-8-6-8-6 6-6 6c0 4 4.109 12.109 8 16s12 8 16 8c0 0 6-4 6-6s-6-8-8-6z"></path>
-            </svg>
-            <span>contact</span>
-        </li>
-        <div class="indicator"></div>
-    </ul>
-
-<!-- <script src="https://unpkg.com/ionicons@5.4.0/dist/ionicons.js"></script> -->
-<script src='/app.js'></script>
-<script src='/navigation.js'></script>
-<!-- <script src="https://kwes.io/v2/kwes-script.js" defer></script> -->
-
-
-</body>
+      <script src="/app.js" type="module"></script>
+      <script src="/navigation.js" type="module"></script>
+   </body>
 </html>

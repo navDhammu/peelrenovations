@@ -1,0 +1,37 @@
+@use '../base/variables';
+
+button {
+   border: none;
+   cursor: pointer;
+   background-color: transparent;
+}
+
+@mixin btn($bg-color, $text-color: white) {
+   color: $text-color;
+   background-color: $bg-color;
+   &:hover {
+      background-color: darken($bg-color, 30%);
+   }
+}
+
+%btn-sm {
+   padding: 5px 10px;
+}
+%btn-md {
+   padding: 10px 15px;
+   font-size: medium;
+}
+%btn-lg {
+   padding: 15px 20px;
+   font-size: large;
+}
+
+%btn-primary {
+   background-color: variables.$col-cta;
+   @include btn(variables.$col-cta);
+}
+
+%btn-secondary {
+   background-color: aquamarine;
+   border: 2px solid variables.$col-cta;
+}
