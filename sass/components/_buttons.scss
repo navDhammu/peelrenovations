@@ -7,10 +7,18 @@ button {
 }
 
 @mixin btn($bg-color, $text-color: white) {
-   color: $text-color;
    background-color: $bg-color;
+   border-radius: 10px;
+
+   @if $bg-color == transparent {
+      border: 1px solid variables.$col-cta;
+      color: variables.$col-cta;
+   } @else {
+      color: white;
+   }
+
    &:hover {
-      background-color: darken($bg-color, 30%);
+      background-color: darken($bg-color, 10%);
    }
 }
 
@@ -26,12 +34,20 @@ button {
    font-size: large;
 }
 
-%btn-primary {
-   background-color: variables.$col-cta;
+.btn-primary {
    @include btn(variables.$col-cta);
 }
 
-%btn-secondary {
-   background-color: aquamarine;
-   border: 2px solid variables.$col-cta;
+.btn-secondary {
+   @include btn(transparent);
+}
+
+.btn-sm {
+   padding: 5px 10px;
+}
+.btn-md {
+   padding: 10px 15px;
+}
+.btn-lg {
+   padding: 15px 20px;
 }

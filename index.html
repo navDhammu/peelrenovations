@@ -6,27 +6,48 @@
       <meta charset="UTF-8" />
       <meta name="viewport" content="width=device-width, initial-scale=1.0" />
       <title>Peel Renovations - bathroom specialists</title>
-      <link rel="stylesheet" href="./style.css" />
+      <link rel="stylesheet" href="./sass/main.scss" />
    </head>
    <body>
-      <header id="header"></header>
-      <section class="banner">
-         <img class="banner__logo" src="images/icons/logo (1).svg" alt="logo" />
-         <div class="banner__wrapper">
-            <div class="banner__main-text">
-               Specializing in
-               <span class="emphasis"> bathroom </span> renovations from basic to high-end
+      <header class="header">
+         <div class="header__left">
+            <div class="nav-container">
+               <img class="header-logo" src="images/icons/logo (1).svg" alt="logo" />
+               <nav>
+                  <ul>
+                     <li>Our Services</li>
+                     <li>Gallery</li>
+                     <li>Reviews</li>
+                  </ul>
+               </nav>
             </div>
-            <div class="flex-container">
-               <button class="banner__btn-main">See Our Work</button>
-               <button class="banner__btn-sec">
-                  Schedule FREE estimate appointment
-               </button>
+            <div class="header__left__main-wrapper">
+               <div class="header__left__main">
+                  <div class="header__left__main-content">
+                     <h1>
+                        Specializing in
+                        <em> bathroom renovations </em> from basic to high-end
+                     </h1>
+                     <button class="btn-primary btn-lg">See Our Work</button>
+                     <button class="btn-secondary btn-lg" style="margin-left: 1rem;">
+                        Schedule FREE estimate appointment
+                     </button>
+                     <div class="stats-wrapper">
+                        <div class="stat"><em>100+</em>Completed Projects</div>
+                        <div class="stat"><em>100+</em>Satisfied Clients</div>
+                     </div>
+                  </div>
+                  <img class="header__left__main-photo" src="images/gallery/main.jpg" alt="bathroom-photo">
+               </div>
             </div>
          </div>
-      </section>
+         <div class="header__right">
+            <button class="btn-primary btn-lg">contact us</button>
+         </div>
+      </header>
       <section class="section">
-         <h2 class="section__heading">Our Services</h2>
+         <span class="section__heading-sm">what we do</span>
+         <h2 class="section__heading">plan your renovation with <span>expert guidance</span></h2>
          <div class="services__cards">
             <div class="card">
                <h3>Complete Existing Bathroom Renovation</h3>
@@ -54,8 +75,8 @@
          </div>
       </section>
       <section class="section">
-         <h2 class="section__heading">Completed Projects</h2>
-         <p style='margin-bottom: 1rem'>Below are some of our recently completed projects. Work with us to get your bathroom in this list!</p>
+         <span class="section__heading-sm">completed projects</span>
+         <h2 class="section__heading">View our recently <span>completed projects</span></h2>
          <ul class="options">
             <li class="options__list"><button class="options__list-item">All</button></li>
                <li class="options__list"><button class="options__list-item">Powder rooms</button></li>
@@ -67,7 +88,8 @@
          <div class="images-container"></div>
       </section>
       <section class="section">
-         <h2 class="section__heading">Our Reviews</h2>
+         <span class="section__heading-sm">testimonals</span>
+         <h2 class="section__heading">What <span>our clients</span>  say about us</h2>
          <div class="">Reviews</div>
       </section>
       <div class="modal hidden"></div>

@@ -1,6 +1,9 @@
+@use './variables';
+
 html {
    font-size: 16px;
    scroll-behavior: smooth;
+   box-sizing: border-box;
 }
 
 * {
@@ -10,5 +13,14 @@ html {
 }
 
 body {
-   font-family: 'Roboto', Helvetica, Arial, sans-serif;
+   font-family: Helvetica, Arial, sans-serif;
+}
+
+em {
+   color: variables.$col-cta;
+   font-style: normal;
+}
+
+h1 {
+   font-size: 3rem;
 }
