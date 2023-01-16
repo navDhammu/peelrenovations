@@ -2,7 +2,7 @@
 @use './base/variables';
 @use './sections/contact';
 @use './sections/header';
-
+@use './sections/about';
 @use './sections/services';
 @use './sections/gallery';
 @use './sections/footer';
@@ -10,32 +10,21 @@
 
 .section {
    padding: 4rem;
-   display: flex;
-   flex-direction: column;
-   align-items: center;
 
    &__heading-sm {
       color: variables.$col-cta;
       text-transform: uppercase;
       font-size: 15px;
       letter-spacing: 0.25em;
-      margin-bottom: 1rem;
    }
 
    &__heading {
-      width: 547px;
       font-size: 40px;
-      margin-bottom: 1rem;
-      text-align: center;
+      margin: 1rem 0;
       text-transform: capitalize;
-      margin-bottom: 1rem;
-
-      span {
-         color: variables.$col-cta;
-      }
    }
 
-   &:nth-child(odd) {
+   &:nth-child(even) {
       background-color: variables.$col-bg;
    }
 }

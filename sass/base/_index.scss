@@ -16,11 +16,11 @@ body {
    font-family: Helvetica, Arial, sans-serif;
 }
 
+p {
+   line-height: 24px;
+}
+
 em {
    color: variables.$col-cta;
    font-style: normal;
-}
-
-h1 {
-   font-size: 3rem;
 }
