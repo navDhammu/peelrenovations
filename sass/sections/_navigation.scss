@@ -1,7 +1,7 @@
-@use '../base/variables';
+@use '../base/vars';
 
 .tab-color-change {
-   color: variables.$col-main;
+   color: vars.$col-main;
 }
 
 .tab-bar {
@@ -47,7 +47,7 @@
    bottom: 0;
    width: 15%;
    height: 3px;
-   background: variables.$col-main;
+   background: vars.$col-main;
    margin-top: 58px;
    margin-left: 0;
    transition: transform 0.5s ease;

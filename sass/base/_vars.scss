@@ -1,3 +1,4 @@
+//colors
 $col-main: rgb(38, 34, 98);
 $col-cta: #00b4ff;
 $col-icons: lighten($col-main, 60%);
@@ -5,3 +6,9 @@ $col-background: #f9f9f9;
 
 $col-lightgray: #f9f9f9;
 $col-bg: #e0f2ff;
+
+//breakpoints
+$screen-sm: 640px;
+$screen-md: 768px;
+$screen-lg: 1024px;
+$screen-xl: 1280px;

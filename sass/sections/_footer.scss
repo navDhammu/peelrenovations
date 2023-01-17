@@ -1,8 +1,8 @@
-@use '../base/variables';
+@use '../base/vars';
 
 .footer {
    // position: relative;
-   background-color: variables.$col-lightgray;
+   background-color: vars.$col-lightgray;
    font-size: 16px;
    line-height: 1.5rem;
 

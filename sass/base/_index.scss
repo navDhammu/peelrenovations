@@ -1,4 +1,4 @@
-@use './variables';
+@use './vars';
 
 html {
    font-size: 16px;
@@ -21,6 +21,6 @@ p {
 }
 
 em {
-   color: variables.$col-cta;
+   color: vars.$col-cta;
    font-style: normal;
 }

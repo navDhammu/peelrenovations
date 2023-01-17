@@ -1,12 +1,12 @@
 @use '../components/buttons';
-@use '../base/variables';
+@use '../base/vars';
 
 .images-container {
    display: flex;
    flex-wrap: wrap;
    gap: 1rem;
    justify-content: center;
-   background-color: variables.$col-bg;
+   background-color: vars.$col-bg;
 }
 
 .img {

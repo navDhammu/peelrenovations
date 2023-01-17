@@ -1,5 +1,5 @@
 @use './base/index';
-@use './base/variables';
+@use './base/vars';
 @use './sections/contact';
 @use './sections/header';
 @use './sections/about';
@@ -9,23 +9,23 @@
 @use './sections/navigation';
 
 .section {
-   padding: 4rem;
+   padding: 5vw;
 
    &__heading-sm {
-      color: variables.$col-cta;
+      color: vars.$col-cta;
       text-transform: uppercase;
       font-size: 15px;
       letter-spacing: 0.25em;
    }
 
    &__heading {
-      font-size: 40px;
+      font-size: clamp(1.8rem, 3vw, 3rem);
       margin: 1rem 0;
       text-transform: capitalize;
    }
 
    &:nth-child(even) {
-      background-color: variables.$col-bg;
+      background-color: vars.$col-bg;
    }
 }
 
