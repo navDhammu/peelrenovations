@@ -1,3 +1,5 @@
+@use '../base/vars';
+
 .services {
    padding: 1rem;
    &__heading {
@@ -5,12 +7,14 @@
    }
 
    &__cards {
-      display: flex;
-      flex-wrap: wrap;
       justify-content: center;
       gap: 1rem;
+
+      @media (min-width: vars.$screen-md) {
+         display: flex;
+         justify-content: center;
+      }
       .card {
-         flex-basis: 300px;
          padding: 1rem;
          font-weight: 100;
          //  border: 1px solid black;
