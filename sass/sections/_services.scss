@@ -9,15 +9,30 @@
    &__cards {
       justify-content: center;
       gap: 1rem;
+      padding-left: 2rem;
+      list-style-position: inside;
 
-      @media (min-width: vars.$screen-md) {
+      @media (min-width: vars.$screen-lg) {
          display: flex;
          justify-content: center;
       }
       .card {
          padding: 1rem;
-         font-weight: 100;
-         //  border: 1px solid black;
+         font-weight: 200;
+
+         h3 {
+            display: inline;
+            text-transform: capitalize;
+         }
+
+         &::marker {
+            color: vars.$col-cta;
+            font-size: 2rem;
+         }
+
+         p {
+            margin-top: 0.5rem;
+         }
       }
    }
 }
