@@ -7,6 +7,11 @@ button {
    max-width: max-content;
 }
 
+a.btn-primary {
+   text-decoration: none;
+   width: fit-content;
+}
+
 @mixin btn($bg-color, $text-color: white) {
    background-color: $bg-color;
    border-radius: 10px;
@@ -37,6 +42,7 @@ button {
 
 .btn-primary {
    @include btn(vars.$col-cta);
+   text-transform: capitalize;
 }
 
 .btn-secondary {
@@ -48,7 +54,9 @@ button {
 }
 .btn-md {
    padding: 10px 15px;
+   font-size: medium;
 }
 .btn-lg {
    padding: 15px 20px;
+   font-size: medium;
 }

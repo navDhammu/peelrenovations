@@ -38,4 +38,4 @@ function createDOMElement(tag, atributes) {
    return el
 }
 
-fetchImages()
+// fetchImages()
