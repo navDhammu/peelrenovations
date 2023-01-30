@@ -9,6 +9,10 @@
 .section {
    padding: 5vw;
 
+   &:nth-child(even) {
+      background-color: vars.$col-bg;
+   }
+
    &__heading-sm {
       color: vars.$col-cta;
       text-transform: uppercase;
