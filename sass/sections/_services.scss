@@ -6,6 +6,10 @@
       width: 100%;
    }
 
+   &:nth-child(even) {
+      background-color: vars.$col-bg;
+   }
+
    &__cards {
       justify-content: center;
       gap: 1rem;
