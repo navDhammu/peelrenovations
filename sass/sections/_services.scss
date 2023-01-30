@@ -9,7 +9,6 @@
    &__cards {
       justify-content: center;
       gap: 1rem;
-      padding-left: 2rem;
       list-style-position: inside;
 
       @media (min-width: vars.$screen-lg) {

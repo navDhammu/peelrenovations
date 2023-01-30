@@ -1,6 +1,5 @@
 @use './base/index';
 @use './base/vars';
-@use './sections/contact';
 @use './sections/header';
 @use './sections/about';
 @use './sections/services';
@@ -22,9 +21,5 @@
       font-size: clamp(1.8rem, 3vw, 3rem);
       margin: 1rem 0;
       text-transform: capitalize;
-   }
-
-   &:nth-child(even) {
-      background-color: vars.$col-bg;
    }
 }
