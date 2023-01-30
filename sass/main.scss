@@ -27,6 +27,12 @@
    display: flex;
    gap: 1rem;
    margin-top: 1rem;
-
    white-space: nowrap;
+   align-items: center;
+
+   a[href="https://goo.gl/maps/HF2pg8mVfztjMiVZ7"]
+   {
+      margin: 0 auto;
+      width: clamp(120px, 15vw, 240px);
+   }
 }
